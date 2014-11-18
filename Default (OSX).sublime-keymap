@@ -1,0 +1,6 @@
+[
+	{ "keys": ["super+ctrl+h"], "command": "reindent"},
+	{ "keys": ["super+ctrl+alt+left"], "command": "move_to", "args": {"to": "hardbol"} },
+	{ "keys": ["super+ctrl+alt+right"], "command": "move_to", "args": {"to": "hardeol"} },
+	{ "keys": ["alt+."], "command": "reveal_in_side_bar" }
+]
