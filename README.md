@@ -1,6 +1,6 @@
 # Fast [iTerm](http://iterm2.com/) Setup
 
-All files here are inspired / copied from
+All files here are inspired / copied from [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) github repo.
 
 This is quick reference to help me setup iTerm.
 
