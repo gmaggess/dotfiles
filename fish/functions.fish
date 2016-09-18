@@ -55,11 +55,6 @@ function shellswitch
 	chsh -s (brew --prefix)/bin/$argv
 end
 
-function code
-  env VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCodeInsiders" --args $argv
-end
-
-
 function fuck -d 'Correct your previous console command'
     set -l exit_code $status
     set -l eval_script (mktemp 2>/dev/null ; or mktemp -t 'thefuck')
