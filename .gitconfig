@@ -14,8 +14,9 @@
 	reup = rebase-update # depot_tools specific
 
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/gmaggessy/.gitignore
 	attributesfile = ~/.gitattributes
+	editor = /usr/bin/vim
 
 [pager]
 	# insanely beautiful diffs ==> npm install -g diff-so-fancy
@@ -93,3 +94,9 @@
 [user]
 	email = george.maggessy@gmail.com
 	name = gmaggess
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
