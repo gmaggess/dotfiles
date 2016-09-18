@@ -18,6 +18,8 @@ alias dt="cd ~/Desktop"
 alias dv="cd ~/Developer"
 alias m="cd ~/Developer/Medallia"
 alias g="git"
+alias gs="git status"
+alias gl="git log"
 alias h="history"
 alias j="jobs"
 

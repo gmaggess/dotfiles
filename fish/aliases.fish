@@ -18,6 +18,18 @@ alias mv 'command gmv --interactive --verbose'
 alias rm 'command grm --interactive --verbose'
 alias cp 'command gcp --interactive --verbose'
 
+# Shortcuts
+function d ; cd ~/Documents/Dropbox; end
+function dl ; cd ~/Downloads; end
+function dt ; cd ~/Desktop; end
+function dv ; cd ~/Developer; end
+function m ; cd ~/Developer/Medallia; end
+function g ; git; end
+function gs ; git status; end
+function gl ; git log; end
+function git-owner ; git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n; end
+function h ; history; end
+function j ; jobs; end
 
 alias cask='brew cask' # i <3 u cask
 alias where=which # sometimes i forget
