@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/gmaggessy/Developer/github/dotfiles-1/.vim'
+let g:netrw_dirhist_2='/Users/gmaggessy'
+let g:netrw_dirhist_3='/Users/gmaggessy/Developer/github/dotfiles-1/bin'
+let g:netrw_dirhist_4='/Users/gmaggessy'
+let g:netrw_dirhist_5='/Users/gmaggessy/Developer/github'
