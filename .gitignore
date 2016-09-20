@@ -27,6 +27,7 @@ Thumbs.db
 fishd.*
 .config/fish/fish_history
 fish/fish_history
+fish_prompt.*.copy
 
 # random
 shilocation
