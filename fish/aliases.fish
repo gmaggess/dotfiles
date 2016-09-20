@@ -30,6 +30,7 @@ function gl ; git log; end
 function git-owner ; git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n; end
 function h ; history; end
 function j ; jobs; end
+function karma-chrome ; ./node_modules/medallia-testing-tools/node_modules/karma/bin/karma start --browsers Chrome --debug; end
 
 alias cask='brew cask' # i <3 u cask
 alias where=which # sometimes i forget

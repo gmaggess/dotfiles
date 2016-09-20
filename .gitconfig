@@ -92,11 +92,13 @@
 [diff]
 	compactionHeuristic = true
 [user]
-	email = george.maggessy@gmail.com
-	name = gmaggess
+	email = gmaggessy@medallia.com
+	name = gmaggessy
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[commit]
+	template = /Users/gmaggessy/.stCommitMsg
