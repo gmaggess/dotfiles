@@ -25,6 +25,7 @@ make_completion g 'git'
 
 # Font
 set -g theme_powerline_fonts no
+set -g theme_powerline_fonts yes
 set -g theme_nerd_fonts yes
 # set -g theme_display_git no
 # set -g theme_display_git_untracked no
@@ -36,7 +37,7 @@ set -g theme_nerd_fonts yes
 # set -g theme_display_virtualenv no
 # set -g theme_display_ruby no
 # set -g theme_display_user yes
-# set -g theme_display_vi yes
+set -g theme_display_vi yes
 # set -g theme_display_vi_hide_mode default
 # set -g theme_display_date no
 # set -g theme_display_cmd_duration yes
