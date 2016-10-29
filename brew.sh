@@ -75,5 +75,8 @@ brew install pidcat   # colored logcat guy
 
 brew install zsh
 
+# npm packages
+brew install diff-so-fancy
+
 # Remove outdated versions from the cellar
 brew cleanup

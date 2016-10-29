@@ -8,6 +8,7 @@ set default_machine "gmaggessy-mbp"
 source ~/.config/fish/aliases.fish
 source ~/.config/fish/chpwd.fish
 source ~/.config/fish/functions.fish
+source ~/.config/fish/nvm-wrapper/nvm.fish
 
 # Completions
 function make_completion --argument-names alias command
@@ -115,6 +116,9 @@ set -gx LESS_TERMCAP_se \e'[0m'           # end standout-mode
 set -gx LESS_TERMCAP_so \e'[38;5;246m'    # begin standout-mode - info box
 set -gx LESS_TERMCAP_ue \e'[0m'           # end underline
 set -gx LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
+
+set -gx JAVA_HOME /Library/Java/Home/ # JAVA_HOME
+set -gx GRADLE_HOME /usr/local/Cellar/gradle/3.1/ # GRADLE_HOME
 
 
 # this currently messes with newlines in my prompt. lets debug it later.
