@@ -31,3 +31,6 @@ fish_prompt.*.copy
 
 # random
 shilocation
+
+# Medallia
+deployToS3.fish
