@@ -4,7 +4,7 @@ set default_machine "gmaggessy-mbp"
 
 #set -x  DYLD_FALLBACK_LIBRARY_PATH /Users/gmaggessy/.homebrew/lib
 
-# source ~/.config/fish/path.fish
+source ~/.config/fish/path.fish
 source ~/.config/fish/aliases.fish
 source ~/.config/fish/chpwd.fish
 source ~/.config/fish/functions.fish
@@ -25,33 +25,29 @@ end
 make_completion g 'git'
 
 # Font
-set -g theme_powerline_fonts no
 set -g theme_powerline_fonts yes
 set -g theme_nerd_fonts yes
-# set -g theme_display_git no
-# set -g theme_display_git_untracked no
-# set -g theme_display_git_ahead_verbose yes
-# set -g theme_git_worktree_support yes
-# set -g theme_display_vagrant yes
-# set -g theme_display_docker_machine no
-# set -g theme_display_hg yes
-# set -g theme_display_virtualenv no
-# set -g theme_display_ruby no
-# set -g theme_display_user yes
+set -g theme_display_git yes
+set -g theme_display_git_untracked yes
+set -g theme_display_git_ahead_verbose yes
+set -g theme_git_worktree_support yes
+set -g theme_display_vagrant yes
+set -g theme_display_docker_machine no
+set -g theme_display_hg yes
+set -g theme_display_virtualenv yes
+set -g theme_display_ruby no
+set -g theme_display_user yes
 set -g theme_display_vi yes
-# set -g theme_display_vi_hide_mode default
-# set -g theme_display_date no
-# set -g theme_display_cmd_duration yes
-# set -g theme_title_display_process yes
-# set -g theme_title_display_path no
-# set -g theme_title_use_abbreviated_path no
-# set -g theme_date_format "+%a %H:%M"
-# set -g theme_avoid_ambiguous_glyphs yes
-# set -g theme_powerline_fonts no
-# set -g theme_nerd_fonts yes
-# set -g theme_show_exit_status yes
-# set -g default_user your_normal_user
-# set -g theme_color_scheme dark
+set -g theme_display_vi_hide_mode default
+set -g theme_display_date yes
+set -g theme_display_cmd_duration yes
+set -g theme_title_display_process yes
+set -g theme_title_display_path yes
+set -g theme_title_use_abbreviated_path no
+set -g theme_date_format "+%a %H:%M"
+set -g theme_avoid_ambiguous_glyphs yes
+set -g theme_show_exit_status yes
+set -g theme_color_scheme dark
 
 # Readline colors
 set -g fish_color_autosuggestion 555 yellow
@@ -116,10 +112,6 @@ set -gx LESS_TERMCAP_se \e'[0m'           # end standout-mode
 set -gx LESS_TERMCAP_so \e'[38;5;246m'    # begin standout-mode - info box
 set -gx LESS_TERMCAP_ue \e'[0m'           # end underline
 set -gx LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
-
-set -gx JAVA_HOME /Library/Java/Home/ # JAVA_HOME
-set -gx GRADLE_HOME /usr/local/Cellar/gradle/3.1/ # GRADLE_HOME
-
 
 # this currently messes with newlines in my prompt. lets debug it later.
 # test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
