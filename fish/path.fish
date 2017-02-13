@@ -17,5 +17,10 @@ for entry in (string split \n $PATH_DIRS)
 end
 
 # set PA $PA /Users/gmaggessy/.rvm/gems/ruby-2.3.0/bin
+set -gx JAVA_HOME /Library/Java/Home # JAVA_HOME
+set -gx GRADLE_HOME /usr/local/Cellar/gradle/3.1 # GRADLE_HOME
 
 set --export PATH $PA
+
+#set -gx PATH $GRADLE_HOME/bin $JAVA_HOME/bin $PATH
+#set fish_user_paths $fish_user_paths $GRADLE_HOME/bin $JAVA_HOME/bin
