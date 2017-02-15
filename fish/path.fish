@@ -20,7 +20,7 @@ end
 set -gx JAVA_HOME /Library/Java/Home # JAVA_HOME
 set -gx GRADLE_HOME /usr/local/Cellar/gradle/3.1 # GRADLE_HOME
 
-set --export PATH $PA
+set --export PATH $PA $JAVA_HOME/bin $GRADLE_HOME/bin $PATH
 
 #set -gx PATH $GRADLE_HOME/bin $JAVA_HOME/bin $PATH
 #set fish_user_paths $fish_user_paths $GRADLE_HOME/bin $JAVA_HOME/bin
