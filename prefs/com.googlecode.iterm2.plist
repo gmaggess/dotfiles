@@ -338,13 +338,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>794 246 445 77 0 0 1440 877 </string>
+	<string>794 112 445 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 258 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>488 211 796 473 0 0 1440 877 </string>
+	<string>488 259 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>440 278 619 473 0 0 1440 877 </string>
+	<string>263 293 1067 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>417 370 570 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1162,7 +1162,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/gmaggess/Developer/myprojects/dotfiles/prefs</string>
+	<string>/Users/gmaggess/prefs</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>

@@ -30,7 +30,7 @@ set -g theme_nerd_fonts yes
 set -g theme_display_git yes
 set -g theme_display_git_untracked yes
 set -g theme_display_git_ahead_verbose yes
-set -g theme_git_worktree_support yes
+#set -g fish_prompt_pwd_dir_length 0
 set -g theme_display_vagrant yes
 set -g theme_display_docker_machine no
 set -g theme_display_hg yes
@@ -102,7 +102,6 @@ set -g fish_pager_color_completion normal
 set -g fish_pager_color_description 555 yellow
 set -g fish_pager_color_prefix cyan
 set -g fish_pager_color_progress cyan
-
 
 # highlighting inside manpages and elsewhere
 set -gx LESS_TERMCAP_mb \e'[01;31m'       # begin blinking
