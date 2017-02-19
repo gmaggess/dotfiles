@@ -1,5 +1,5 @@
-set default_user "gmaggessy"
-set default_machine "gmaggessy-mbp"
+set default_user "gmaggess"
+set default_machine "gmaggess-mbp"
 
 
 #set -x  DYLD_FALLBACK_LIBRARY_PATH /Users/gmaggessy/.homebrew/lib
