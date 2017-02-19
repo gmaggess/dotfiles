@@ -18,7 +18,7 @@ end
 
 # set PA $PA /Users/gmaggessy/.rvm/gems/ruby-2.3.0/bin
 set -gx JAVA_HOME /Library/Java/Home # JAVA_HOME
-set -gx GRADLE_HOME /usr/local/Cellar/gradle/3.1 # GRADLE_HOME
+set -gx GRADLE_HOME /usr/local/Cellar/gradle/3.3 # GRADLE_HOME
 
 set --export PATH $PA $JAVA_HOME/bin $GRADLE_HOME/bin $PATH
 
