@@ -13,7 +13,6 @@ brew tap caskroom/versions
 # daily
 # brew cask install spectacle
 brew cask install dropbox
-brew cask install gyazo
 brew cask install 1password
 # brew cask install rescuetime
 brew cask install flux
@@ -49,6 +48,7 @@ brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install firefox-esr
 brew cask install firefoxdeveloperedition
+brew cask install opera
 # brew cask install firefoxnightly
 # brew cask install webkit-nightly
 # brew cask install chromium
@@ -68,7 +68,11 @@ brew cask install appcleaner
 brew cask install forklift
 brew cask install keka
 brew cask install the-unarchiver
-
+brew cask install kindle
+brew cask install bartender
+brew cask install caffeine
+brew cask install transmission
+brew cask install whatsapp
 
 # Not on cask but I want regardless.
 
