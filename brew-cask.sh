@@ -64,3 +64,9 @@ brew cask install the-unarchiver
 brew cask install transmission
 brew cask install vlc
 brew cask install whatsapp
+
+#font
+brew tap caskroom/fonts
+brew cask install font-source-code-pro 
+brew cask install font-source-code-pro-for-powerline 
+brew cask install font-sourcecodepro-nerd-font-mono

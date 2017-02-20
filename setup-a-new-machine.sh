@@ -39,7 +39,9 @@ sh .osx
 ###
 ##############################################################################################################
 
-
+curl -L http://get.oh-my.fish > install
+fish install --path=~/.local/share/omf --config=~/.config/omf
+omf install bobthefish
 
 ##############################################################################################################
 ### symlinks to link dotfiles into ~/
