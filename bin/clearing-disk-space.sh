@@ -1,3 +1,4 @@
+#!/bin/bash
 # won't last long but will give you 1G.
 sudo rm /private/var/vm/sleepimage
 
