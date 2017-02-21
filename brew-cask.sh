@@ -19,6 +19,7 @@ brew cask install flux
 brew cask install google-drive
 brew cask install google-photos-backup
 brew cask install onedrive
+brew cask install spectacle
 
 # dev
 brew cask install balsamiq-mockups
@@ -67,6 +68,6 @@ brew cask install whatsapp
 
 #font
 brew tap caskroom/fonts
-brew cask install font-source-code-pro 
-brew cask install font-source-code-pro-for-powerline 
+brew cask install font-source-code-pro
+brew cask install font-source-code-pro-for-powerline
 brew cask install font-sourcecodepro-nerd-font-mono
