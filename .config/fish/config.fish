@@ -114,3 +114,4 @@ set -gx LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
 # this currently messes with newlines in my prompt. lets debug it later.
 # test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+set PATH /Users/gmaggessy/.npm-packages/bin $PATH
