@@ -1,0 +1,1 @@
+/Users/gmaggessy/Developer/myprojects/dotfiles/pure.zsh

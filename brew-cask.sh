@@ -19,7 +19,7 @@ brew cask install flux
 brew cask install google-drive
 brew cask install google-photos-backup
 brew cask install onedrive
-brew cask install spectacle
+#brew cask install spectacle
 
 # dev
 brew cask install balsamiq-mockups
@@ -33,7 +33,7 @@ brew cask install vagrant-manager
 brew cask install virtualbox
 brew cask install virtualbox-extension-pack
 brew cask install visual-studio-code
-brew cask install webstorm
+#brew cask install webstorm
 
 # fun
 brew cask install limechat
@@ -47,8 +47,8 @@ brew cask install firefox-esr
 brew cask install firefoxdeveloperedition
 brew cask install google-chrome
 brew cask install google-chrome-canary
-brew cask install opera
-brew cask install torbrowser
+#brew cask install opera
+#brew cask install torbrowser
 
 # less often
 brew cask install appcleaner

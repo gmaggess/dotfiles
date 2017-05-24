@@ -63,8 +63,6 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # ^ the only downside with this is [up] on the readline will go over all history not just this bash session.
 
-
-
 ##
 ## hooking in other apps…
 ##
@@ -131,3 +129,4 @@ shopt -s dirspell 2> /dev/null
 
 # Turn on recursive globbing (enables ** to recurse all directories)
 shopt -s globstar 2> /dev/null
+[[ -r ~/.bashrc ]] && . ~/.bashrc
