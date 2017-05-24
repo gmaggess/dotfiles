@@ -148,7 +148,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>231 60 445 77 0 0 1440 877 </string>
+	<string>700 388 445 77 0 0 2560 1417 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>396 905 606 456 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
@@ -158,13 +158,13 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>142 230 918 495 0 0 1440 877 </string>
+	<string>805 607 918 495 0 0 2560 1417 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>230 473 592 584 0 0 2560 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 23 1431 854 0 0 1440 877 </string>
+	<string>430 251 1698 930 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>6 181 1431 875 0 0 2560 1057 </string>
+	<string>7 449 570 427 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -733,7 +733,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SourceCodePro-Regular 12</string>
+			<string>SauceCodePowerline-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -868,7 +868,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-19T08:32:06Z</date>
+	<date>2017-06-05T15:35:24Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>

@@ -3,11 +3,12 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/gmaggessy/.oh-my-zsh
-
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="pure"
+autoload -U promptinit; promptinit
+ZSH_THEME="refined"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +52,7 @@ ZSH_THEME="pure"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, zsh-autosuggestions)
+plugins=(git, zsh-autosuggestions,zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases.zsh
@@ -83,3 +84,20 @@ source ~/.aliases.zsh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export GOPATH=/Users/gmaggessy/Developer/gocode
+
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export IDEA_JDK=$JAVA_HOME
+export GRADLE_HOME=/usr/local/Cellar/gradle/3.5
+
+export ANDROID_HOME=/Users/gmaggessy/Library/Android/sdk
+path+=("$ANDROID_HOME/tools:$PATH")
+path+=("$ANDROID_HOME/platform-tools:$PATH")
+path+=("$HOME/.fastlane/bin")
+path+=("$HOME/bin")
+export PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
