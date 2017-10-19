@@ -130,3 +130,17 @@ shopt -s dirspell 2> /dev/null
 # Turn on recursive globbing (enables ** to recurse all directories)
 shopt -s globstar 2> /dev/null
 [[ -r ~/.bashrc ]] && . ~/.bashrc
+
+##
+# Your previous /Users/gmaggess/.bash_profile file was backed up as /Users/gmaggess/.bash_profile.macports-saved_2017-10-17_at_17:38:03
+##
+
+# MacPorts Installer addition on 2017-10-17_at_17:38:03: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+# MacPorts Installer addition on 2017-10-17_at_17:38:03: adding an appropriate MANPATH variable for use with MacPorts.
+export MANPATH="/opt/local/share/man:$MANPATH"
+# Finished adapting your MANPATH environment variable for use with MacPorts.
+
