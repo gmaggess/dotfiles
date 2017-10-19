@@ -2,8 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/gmaggessy/.oh-my-zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+export ZSH=/Users/gmaggess/.oh-my-zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -85,13 +85,18 @@ source ~/.aliases.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export GOPATH=/Users/gmaggessy/Developer/gocode
+export http_proxy=http://www-proxy.us.oracle.com:80
+export https_proxy=http://www-proxy.us.oracle.com:80
+
+#jenv
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export IDEA_JDK=$JAVA_HOME
-export GRADLE_HOME=/usr/local/Cellar/gradle/3.5
+export GRADLE_HOME=/usr/local/Cellar/gradle@2.14/2.14.1
+export GOPATH=/Users/gmaggess/Developer/gocode
 
-export ANDROID_HOME=/Users/gmaggessy/Library/Android/sdk
+export ANDROID_HOME=/Users/gmaggess/Library/Android/sdk
 path+=("$ANDROID_HOME/tools:$PATH")
 path+=("$ANDROID_HOME/platform-tools:$PATH")
 path+=("$HOME/.fastlane/bin")

@@ -37,8 +37,8 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 alias dv='cd ~/Developer'
-alias m='cd ~/Developer/medallia'
-alias mo='cd ~/Developer/medallia/mobile'
+alias o='cd ~/Developer/oracle'
+alias mcs='cd ~/Developer/oracle/mcs'
 
 alias python='python3'
 
