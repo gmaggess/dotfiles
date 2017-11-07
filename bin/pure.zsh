@@ -1,1 +1,1 @@
-/Users/gmaggessy/Developer/myprojects/dotfiles/pure.zsh
+/Users/gmaggess/Developer/github/dotfiles/pure.zsh

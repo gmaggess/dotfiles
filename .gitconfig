@@ -14,9 +14,9 @@
 	reup = rebase-update # depot_tools specific
 
 [core]
-	excludesfile = /Users/gmaggessy/.gitignore
-	attributesfile = ~/.gitattributes
+	excludesfile = /Users/gmaggess/.gitignore_global
 	editor = subl -n -w
+	autocrlf = input
 
 [pager]
 	# insanely beautiful diffs ==> npm install -g diff-so-fancy
@@ -55,17 +55,8 @@
 	tool = opendiff
 
 # rewrites of repo paths
-[url "git@github.com:"]
-	insteadOf = "gh:"
-	insteadOf = "git://github.com"
-	pushInsteadOf = "github:"
-	pushInsteadOf = "git://github.com/"
-    pushInsteadOf = "https://github.com/"
-[url "git@gist.github.com:"]
-	insteadOf = "gst:"
-	pushInsteadOf = "gist:"
-	pushInsteadOf = "git://gist.github.com/"
-	pushInsteadOf = "https://gist.github.com/"
+[url "ssh://george.maggessy%40oracle.com@alm.oraclecorp.com:2222/"]
+	insteadof = alm:
 
 # correct typos
 [help]
@@ -75,13 +66,6 @@
 [push]
 	default = current
 
-# use separate file for username / github token / etc
-[include]
-  path = ~/.gitconfig.local
-
-[init]
-	templatedir = ~/.git_template
-
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
@@ -89,18 +73,28 @@
 
 [fetch]
 	prune = true
+
 [diff]
 	compactionHeuristic = true
+
 [user]
-	email = gmaggessy@medallia.com
+	email = george.maggessy@oracle.com
 	name = George Maggessy
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+
 [commit]
-	template = /Users/gmaggessy/.stCommitMsg
-[credential]
+	template = /Users/gmaggess/.stCommitMsg
 	helper = osxkeychain
+
+[gc]
+	auto = 1
+[http]
+# 	proxy = http://www-proxy.us.oracle.com:80
+	sslVerify = false
