@@ -52,7 +52,7 @@ ZSH_THEME="refined"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, zsh-autosuggestions,zsh-nvm)
+plugins=(git,zsh-autosuggestions,zsh-nvm,zsh-peco-history)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases.zsh
@@ -85,24 +85,58 @@ source ~/.aliases.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export http_proxy=http://www-proxy.us.oracle.com:80
-export https_proxy=http://www-proxy.us.oracle.com:80
+# export HTTP_PROXY=http://www-proxy.us.oracle.com:80
+# export HTTPS_PROXY=http://www-proxy.us.oracle.com:80
+# export http_proxy=http://www-proxy.us.oracle.com:80
+# export https_proxy=http://www-proxy.us.oracle.com:80
 
 #jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# export JAVA_OPTS=("$JAVA_OPTS -DsocksProxyPort")
 export IDEA_JDK=$JAVA_HOME
 export GRADLE_HOME=/usr/local/Cellar/gradle@2.14/2.14.1
 export GOPATH=/Users/gmaggess/Developer/gocode
 
-export ANDROID_HOME=/Users/gmaggess/Library/Android/sdk
+export ANDROID_HOME=/Users/gmaggess/Developer/Android/sdk
 path+=("$ANDROID_HOME/tools:$PATH")
 path+=("$ANDROID_HOME/platform-tools:$PATH")
 path+=("$HOME/.fastlane/bin")
 path+=("$HOME/bin")
+path+=("$HOME/anaconda3/bin")
 export PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# place this after nvm initialization!
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+export PATH="/usr/local/sbin:$PATH"
+
+#python
+export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
+export LDFLAGS="-L$(brew --prefix openssl)/lib"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

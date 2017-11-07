@@ -37,12 +37,12 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 alias dv='cd ~/Developer'
-alias o='cd ~/Developer/oracle'
-alias mcs='cd ~/Developer/oracle/mcs'
-
-alias python='python3'
+alias orcl='cd ~/Developer/oracle'
+alias mcs='cd ~/Developer/oracle/omce'
 
 alias astudio="open -a /Applications/Android\ Studio.app"
+
+#alias python="python3"
 
 # GIT STUFF
 alias gs='git status'

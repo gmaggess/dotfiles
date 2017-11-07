@@ -144,3 +144,9 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export MANPATH="/opt/local/share/man:$MANPATH"
 # Finished adapting your MANPATH environment variable for use with MacPorts.
 
+
+# added by Anaconda3 5.0.1 installer
+export PATH="/anaconda3/bin:$PATH"
+
+# added by Anaconda3 5.0.1 installer
+export PATH="/Users/gmaggess/anaconda3/bin:$PATH"

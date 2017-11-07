@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <monodroid>
-  <android-sdk path="/Users/gmaggessy/Library/Android/sdk" />
+  <android-sdk path="/Users/gmaggess/Library/Android/sdk" />
   <android-ndk path="/Users/gmaggessy/Library/Developer/Xamarin/android-ndk/android-ndk-r14b" />
 </monodroid>
