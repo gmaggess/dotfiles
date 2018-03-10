@@ -3,12 +3,14 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/gmaggess/.oh-my-zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+export ZSH_CUSTOM=/Users/gmaggess/.oh-my-zsh/custom
+source $ZSH_CUSTOM/plugins/zsh-autosuggestions
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 autoload -U promptinit; promptinit
 ZSH_THEME="refined"
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -82,13 +84,8 @@ source ~/.aliases.zsh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# export HTTP_PROXY=http://www-proxy.us.oracle.com:80
-# export HTTPS_PROXY=http://www-proxy.us.oracle.com:80
-# export http_proxy=http://www-proxy.us.oracle.com:80
-# export https_proxy=http://www-proxy.us.oracle.com:80
+# alias zshconfig="subl ~/.zshrc"
+# alias ohmyzsh="subl ~/.oh-my-zsh"
 
 #jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
@@ -97,14 +94,13 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # export JAVA_OPTS=("$JAVA_OPTS -DsocksProxyPort")
 export IDEA_JDK=$JAVA_HOME
 export GRADLE_HOME=/usr/local/Cellar/gradle@2.14/2.14.1
-export GOPATH=/Users/gmaggess/Developer/gocode
 
-export ANDROID_HOME=/Users/gmaggess/Developer/Android/sdk
+export ANDROID_HOME=$HOME/dev/Android/sdk
 path+=("$ANDROID_HOME/tools:$PATH")
 path+=("$ANDROID_HOME/platform-tools:$PATH")
-path+=("$HOME/.fastlane/bin")
+#path+=("$HOME/.fastlane/bin")
 path+=("$HOME/bin")
-path+=("$HOME/anaconda3/bin")
+path+=("/usr/local/anaconda3/bin")
 export PATH
 
 export NVM_DIR="$HOME/.nvm"
@@ -134,9 +130,13 @@ load-nvmrc
 
 export PATH="/usr/local/sbin:$PATH"
 
+eval $(thefuck --alias)
+
 #python
 export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

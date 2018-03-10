@@ -31,6 +31,9 @@ git clone https://github.com/rupa/z.git ~/code/z
 # disable itunes opening on media keys
 git clone https://github.com/thebitguru/play-button-itunes-patch ~/code/play-button-itunes-patch
 
+# nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+nvm install 8
 
 # my magic photobooth symlink -> dropbox. I love it.
 # 	 + first move Photo Booth folder out of Pictures

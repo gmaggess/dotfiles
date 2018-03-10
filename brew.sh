@@ -24,6 +24,7 @@ brew install bash
 brew tap homebrew/versions
 brew install bash-completion2
 brew install peco
+brew install thefuck
 
 brew install homebrew/completions/brew-cask-completion
 
@@ -57,24 +58,24 @@ brew install mtr
 
 
 # Install other useful binaries
-brew install the_silver_searcher
-brew install fzf
-brew install nvm
+# brew install the_silver_searcher
+# brew install fzf
 brew install git
-brew install imagemagick --with-webp
+# brew install imagemagick --with-webp
 brew install node # This installs `npm` too using the recommended installation method
 brew install pv
 brew install rename
 brew install tree
-brew install zopfli
-brew install ffmpeg --with-libvpx
-
+# brew install zopfli
+# brew install ffmpeg --with-libvpx
 brew install terminal-notifier
 
+brew install Caskroom/cask/java
+brew install pyenv
 brew install android-platform-tools
 brew install pidcat   # colored logcat guy
 
-brew install zsh
+brew install zsh zsh-completions
 
 # npm packages
 brew install diff-so-fancy

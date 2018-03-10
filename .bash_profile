@@ -72,8 +72,6 @@ export NVM_DIR="$HOME/.nvm"
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-
-
 # z beats cd most of the time. `brew install z`
 zpath="$(brew --prefix)/etc/profile.d/z.sh"
 [ -s $zpath ] && source $zpath
@@ -143,10 +141,3 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # MacPorts Installer addition on 2017-10-17_at_17:38:03: adding an appropriate MANPATH variable for use with MacPorts.
 export MANPATH="/opt/local/share/man:$MANPATH"
 # Finished adapting your MANPATH environment variable for use with MacPorts.
-
-
-# added by Anaconda3 5.0.1 installer
-export PATH="/anaconda3/bin:$PATH"
-
-# added by Anaconda3 5.0.1 installer
-export PATH="/Users/gmaggess/anaconda3/bin:$PATH"
