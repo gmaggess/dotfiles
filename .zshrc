@@ -3,12 +3,14 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/gmaggess/.oh-my-zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+export ZSH_CUSTOM=/Users/gmaggess/.oh-my-zsh/custom
+source $ZSH_CUSTOM/plugins/zsh-autosuggestions
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 autoload -U promptinit; promptinit
 ZSH_THEME="refined"
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -97,14 +99,13 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # export JAVA_OPTS=("$JAVA_OPTS -DsocksProxyPort")
 export IDEA_JDK=$JAVA_HOME
 export GRADLE_HOME=/usr/local/Cellar/gradle@2.14/2.14.1
-export GOPATH=/Users/gmaggess/Developer/gocode
 
-export ANDROID_HOME=/Users/gmaggess/Developer/Android/sdk
+export ANDROID_HOME=$HOME/dev/Android/sdk
 path+=("$ANDROID_HOME/tools:$PATH")
 path+=("$ANDROID_HOME/platform-tools:$PATH")
-path+=("$HOME/.fastlane/bin")
+#path+=("$HOME/.fastlane/bin")
 path+=("$HOME/bin")
-path+=("$HOME/anaconda3/bin")
+path+=("/usr/local/anaconda3/bin")
 export PATH
 
 export NVM_DIR="$HOME/.nvm"
@@ -133,6 +134,8 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 export PATH="/usr/local/sbin:$PATH"
+
+eval $(thefuck --alias)
 
 #python
 export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
