@@ -36,9 +36,9 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-alias dv='cd ~/Developer'
-alias orcl='cd ~/Developer/oracle'
-alias mcs='cd ~/Developer/oracle/omce'
+alias dv='cd ~/dev'
+alias orcl='cd ~/dev/oracle'
+alias mcs='cd ~/dev/oracle/omce'
 
 alias astudio="open -a /Applications/Android\ Studio.app"
 
