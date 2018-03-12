@@ -45,15 +45,15 @@ alias astudio="open -a /Applications/Android\ Studio.app"
 #alias python="python3"
 
 # GIT STUFF
-alias gs='git status'
-alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
-alias ga='git commit --amend'
-function clone() {
-    git clone --depth=1 $1
-    cd $(basename ${1%.*})
-    yarn install &
-    npm install
-}
+# alias gs='git status'
+# alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+# alias ga='git commit --amend'
+# function clone() {
+#     git clone --depth=1 $1
+#     cd $(basename ${1%.*})
+#     yarn install &
+#     npm install
+# }
 alias push="git push"
 alias pushf="git push --force"
 # Undo a `git push`

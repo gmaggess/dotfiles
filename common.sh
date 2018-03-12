@@ -46,7 +46,6 @@ nvm install 8
 # for the c alias (syntax highlighted cat)
 sudo easy_install Pygments
 
-
 # change to bash 4 (installed by homebrew)
 BASHPATH=$(brew --prefix)/bin/bash
 #sudo echo $BASHPATH >> /etc/shells
@@ -63,6 +62,13 @@ echo $BASH_VERSION # should be 4.x not the old 3.2.X
 # setting up the sublime symlink
 ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
+# Install oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+git clone https://github.com/jimeh/zsh-peco-history.git $ZSH_CUSTOM/plugins/zsh-peco-history
+
+git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 ###
 ##############################################################################################################
