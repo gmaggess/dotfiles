@@ -2,8 +2,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/gmaggess/.oh-my-zsh
-export ZSH_CUSTOM=/Users/gmaggess/.oh-my-zsh/custom
+export ZSH=$HOME/.oh-my-zsh
+export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
+export NVM_LAZY_LOAD=true
 source $ZSH_CUSTOM/plugins/zsh-autosuggestions
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -54,7 +55,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git,zsh-autosuggestions,zsh-nvm,zsh-peco-history)
+plugins+=(git zsh-autosuggestions zsh-peco-history zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases.zsh
