@@ -97,7 +97,7 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export IDEA_JDK=$JAVA_HOME
 export GRADLE_HOME=/usr/local/Cellar/gradle@2.14/2.14.1
 
-export ANDROID_HOME=$HOME/dev/Android/sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
 path+=("$ANDROID_HOME/tools:$PATH")
 path+=("$ANDROID_HOME/platform-tools:$PATH")
 #path+=("$HOME/.fastlane/bin")
