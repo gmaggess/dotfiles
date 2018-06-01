@@ -57,7 +57,6 @@ brew cask install appcleaner
 brew cask install bartender
 brew cask install caffeine
 brew cask install disk-inventory-x
-brew cask install forklift
 brew cask install gimp
 #brew cask install keka
 #brew cask install kindle
