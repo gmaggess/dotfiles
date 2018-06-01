@@ -4,12 +4,12 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
-export NVM_LAZY_LOAD=true
 source $ZSH_CUSTOM/plugins/zsh-autosuggestions
 export EDITOR=/usr/local/bin/subl
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_DISABLE_COMPFIX=true
 autoload -U promptinit; promptinit
 ZSH_THEME="refined"
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -56,7 +56,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins+=(git zsh-autosuggestions zsh-peco-history zsh-nvm)
+plugins+=(git zsh-autosuggestions zsh-peco-history)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases.zsh
@@ -90,55 +90,19 @@ source ~/.aliases.zsh
 # alias ohmyzsh="subl ~/.oh-my-zsh"
 
 #jenv
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-# export JAVA_OPTS=("$JAVA_OPTS -DsocksProxyPort")
-export IDEA_JDK=$JAVA_HOME
-export GRADLE_HOME=/usr/local/Cellar/gradle@2.14/2.14.1
-
 export ANDROID_HOME=$HOME/Library/Android/sdk
 path+=("$ANDROID_HOME/tools:$PATH")
 path+=("$ANDROID_HOME/platform-tools:$PATH")
-#path+=("$HOME/.fastlane/bin")
 path+=("$HOME/bin")
-path+=("/usr/local/anaconda3/bin")
+path+=("/usr/local/miniconda3/bin")
+path+=("/usr/local/bin:/usr/local/sbin:$PATH")
 export PATH
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# place this after nvm initialization!
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 eval $(thefuck --alias)
 
 #python
 export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

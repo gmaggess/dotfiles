@@ -26,7 +26,7 @@ brew install bash-completion2
 brew install peco
 brew install thefuck
 
-brew install homebrew/completions/brew-cask-completion
+# brew install homebrew/completions/brew-cask-completion
 
 # generic colouriser  http://kassiopeia.juls.savba.sk/~garabik/software/grc/
 brew install grc
@@ -36,9 +36,9 @@ brew install wget --with-iri
 
 # Install more recent versions of some OS X tools
 brew install vim --with-override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+# brew install homebrew/dupes/grep
+# brew install homebrew/dupes/openssh
+# brew install homebrew/dupes/screen
 
 
 # run this script when this file changes guy.
@@ -72,15 +72,17 @@ brew install tree
 # brew install ffmpeg --with-libvpx
 brew install terminal-notifier
 
-brew install Caskroom/cask/java
-brew install pyenv
-brew install android-platform-tools
-brew install pidcat   # colored logcat guy
+# brew install Caskroom/cask/java
+# brew install pyenv
+# brew install pidcat   # colored logcat guy
 
 brew install zsh zsh-completions
 
 # npm packages
 brew install diff-so-fancy
+
+brew tap dart-lang/dart
+brew install dart
 
 # Remove outdated versions from the cellar
 brew cleanup
