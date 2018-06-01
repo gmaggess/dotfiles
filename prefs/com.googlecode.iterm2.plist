@@ -108,7 +108,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Developer/myprojects/dotfiles/prefs</string>
+	<string>~/dev/myprojects/dotfiles/prefs</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -856,7 +856,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/gmaggessy/Developer/myprojects/dotfiles/prefs</string>
+	<string>/Users/gmaggessy/dev/github/dotfiles/prefs</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>

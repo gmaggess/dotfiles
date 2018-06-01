@@ -22,8 +22,7 @@ alias cp 'command gcp --interactive --verbose'
 function d ; cd ~/Documents/Dropbox; end
 function dl ; cd ~/Downloads; end
 function dt ; cd ~/Desktop; end
-function dv ; cd ~/Developer; end
-function m ; cd ~/Developer/Medallia; end
+function dv ; cd ~/dev; end
 function g ; git; end
 function gs ; git status; end
 function gl ; git log; end
