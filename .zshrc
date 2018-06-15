@@ -56,7 +56,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins+=(git zsh-autosuggestions zsh-peco-history)
+plugins+=(git zsh-autosuggestions zsh-peco-history pipenv)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases.zsh
@@ -89,14 +89,17 @@ source ~/.aliases.zsh
 # alias zshconfig="subl ~/.zshrc"
 # alias ohmyzsh="subl ~/.oh-my-zsh"
 
-#jenv
+#java
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+#android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 path+=("$ANDROID_HOME/tools:$PATH")
 path+=("$ANDROID_HOME/platform-tools:$PATH")
-path+=("$HOME/bin")
-path+=("/usr/local/miniconda3/bin")
+#python
+path+=("/usr/local/anaconda3/bin")
+#home
 path+=("/usr/local/bin:/usr/local/sbin:$PATH")
+path+=("$HOME/bin")
 export PATH
 
 eval $(thefuck --alias)
@@ -104,5 +107,11 @@ eval $(thefuck --alias)
 #python
 export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+#tensorflow
+export TENSORFLOW_DIR=$HOME/dev/tensorflow
+export PYTHONPATH="${PYTHONPATH}:${TENSORFLOW_DIR}/models/research:${TENSORFLOW_DIR}/models/research/slim"
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

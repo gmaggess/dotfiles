@@ -34,3 +34,4 @@ shilocation
 
 # Medallia
 deployToS3.fish
+.config/configstore
