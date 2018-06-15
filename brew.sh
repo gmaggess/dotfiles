@@ -61,7 +61,8 @@ brew install mtr
 # brew install the_silver_searcher
 # brew install fzf
 brew install git
-# brew install imagemagick --with-webp
+brew install imagemagick --with-webp
+brew install graphicsmagick
 brew install node # This installs `npm` too using the recommended installation method
 brew install yarn
 brew install watchman
