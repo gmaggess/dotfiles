@@ -4,14 +4,15 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
-source $ZSH_CUSTOM/plugins/zsh-autosuggestions
 export EDITOR=/usr/local/bin/subl
+source $ZSH_CUSTOM/plugins/zsh-autosuggestions
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_DISABLE_COMPFIX=true
 autoload -U promptinit; promptinit
-ZSH_THEME="refined"
+# ZSH_THEME="refined"
+ZSH_THEME="gmaggess"
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Uncomment the following line to use case-sensitive completion.
@@ -88,7 +89,6 @@ source ~/.aliases.zsh
 # Example aliases
 # alias zshconfig="subl ~/.zshrc"
 # alias ohmyzsh="subl ~/.oh-my-zsh"
-
 #java
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 #android
@@ -96,7 +96,7 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 path+=("$ANDROID_HOME/tools:$PATH")
 path+=("$ANDROID_HOME/platform-tools:$PATH")
 #python
-path+=("/usr/local/anaconda3/bin")
+# path+=("/usr/local/anaconda3/bin")
 #home
 path+=("/usr/local/bin:/usr/local/sbin:$PATH")
 path+=("$HOME/bin")
@@ -115,3 +115,5 @@ export PYTHONPATH="${PYTHONPATH}:${TENSORFLOW_DIR}/models/research:${TENSORFLOW_
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+#vagrant
+export VAGRANT_HOME=/Users/gmaggess/dev/vagrant

@@ -33,5 +33,5 @@ fish_prompt.*.copy
 shilocation
 
 # Medallia
-deployToS3.fish
 .config/configstore
+.zsh-update
