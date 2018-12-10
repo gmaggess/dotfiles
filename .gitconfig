@@ -50,13 +50,12 @@
 	changed = green
 	untracked = cyan
 
-# git mergetool
-[merge]
-	tool = opendiff
-
 # rewrites of repo paths
 [url "ssh://george.maggessy%40oracle.com@alm.oraclecorp.com:2222/"]
 	insteadof = alm:
+
+[url "git@orahub.oraclecorp.com:"]
+	insteadOf = orahub:
 
 # correct typos
 [help]
@@ -74,27 +73,36 @@
 [fetch]
 	prune = true
 
-[diff]
-	compactionHeuristic = true
-
 [user]
 	email = george.maggessy@oracle.com
 	name = George Maggessy
-
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 
 [commit]
 	template = /Users/gmaggess/.stCommitMsg
 	helper = osxkeychain
 
+[merge]
+tool = sublimerge
+
+[mergetool "sublimerge"]
+cmd = subl -n --wait \"$REMOTE\" \"$BASE\" \"$LOCAL\" \"$MERGED\" --command \"sublimerge_diff_views\"
+trustExitCode = false
+
+[diff]
+tool = sublimerge
+
+[difftool "sublimerge"]
+cmd = subl -n --wait \"$REMOTE\" \"$LOCAL\" --command \"sublimerge_diff_views {\\\"left_read_only\\\": true, \\\"right_read_only\\\": true}\"
+
 [gc]
 	auto = 1
 [http]
-# 	proxy = http://www-proxy.us.oracle.com:80
 	sslVerify = false
+[difftool "sourcetree"]
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
+	path = -ro
+[mergetool "sourcetree"]
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+[url "ssh://null%40oracle.com@alm.oraclecorp.com:2222/"]
+	insteadof = alm:
