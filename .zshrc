@@ -57,7 +57,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins+=(git zsh-autosuggestions zsh-peco-history pipenv)
+plugins+=(git zsh-autosuggestions zsh-peco-history zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases.zsh
@@ -97,14 +97,15 @@ path+=("$ANDROID_HOME/tools:$PATH")
 path+=("$ANDROID_HOME/platform-tools:$PATH")
 #python
 # path+=("/usr/local/anaconda3/bin")
+eval "$(pyenv init -)"
 #home
 path+=("/usr/local/bin:/usr/local/sbin:$PATH")
 path+=("$HOME/bin")
+path+=("$(brew --prefix coreutils)/libexec/gnubin:$PATH")
 export PATH
 
 eval $(thefuck --alias)
 
-#python
 export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
@@ -116,4 +117,4 @@ export PYTHONPATH="${PYTHONPATH}:${TENSORFLOW_DIR}/models/research:${TENSORFLOW_
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 #vagrant
-export VAGRANT_HOME=/Users/gmaggess/dev/vagrant
+export VAGRANT_HOME=/Users/gmaggess/dev/vagrantexport PATH="/usr/local/opt/ruby/bin:$PATH"
