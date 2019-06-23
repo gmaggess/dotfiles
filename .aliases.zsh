@@ -12,6 +12,7 @@ alias ldot='ls -ld .*'
 alias lS='ls -1FSsh'
 alias lart='ls -1Fcart'
 alias lrt='ls -1Fcrt'
+alias xargs='gxargs'
 
 alias zshrc='$EDITOR ~/.zshrc' # Quick access to the ~/.zshrc file
 alias aliases='$EDITOR ~/.aliases.zsh' # Quick access to the ~/.zshrc file
@@ -55,6 +56,7 @@ alias astudio="open -a /Applications/Android\ Studio.app"
 #     yarn install &
 #     npm install
 # }
+alias gclean="git clean -xfd"
 alias push="git push"
 alias pushf="git push --force"
 # Undo a `git push`
@@ -65,9 +67,12 @@ alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup 
 alias master="git checkout master"
 alias rmaster="git pull origin master --rebase"
 alias pmaster="git pull origin master"
+alias developer="git checkout developer"
+alias rdeveloper="git pull origin developer --rebase"
+alias pdeveloper="git pull origin developer"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo gem update'
 # Update installed Ruby gems, Homebrew, npm, and their installed packages
 alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor; npm-check -g -u"
 alias update_brew_npm_gem='brew_update; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update --no-document'
