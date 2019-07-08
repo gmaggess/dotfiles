@@ -1,0 +1,8 @@
+if [ -f ~/.npmrc.auth ]
+then
+  mv ~/.npmrc ~/.npmrc.noauth && mv ~/.npmrc.auth ~/.npmrc
+  echo "npm ready to publish"
+else
+  mv ~/.npmrc ~/.npmrc.auth && mv ~/.npmrc.noauth ~/.npmrc
+  echo "npm standard"
+fi

@@ -10,10 +10,16 @@ source $ZSH_CUSTOM/plugins/zsh-autosuggestions
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_DISABLE_COMPFIX=true
-autoload -U promptinit; promptinit
 # ZSH_THEME="refined"
 ZSH_THEME="gmaggess"
 fpath=(/usr/local/share/zsh-completions $fpath)
+rm -f "$HOME/.zcompdump" 
+autoload -Uz promptinit; promptinit
+
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
+
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -57,7 +63,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins+=(git zsh-autosuggestions zsh-peco-history zsh-nvm)
+plugins+=(git osx thefuck zsh-autosuggestions zsh-peco-history zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases.zsh
@@ -89,15 +95,23 @@ source ~/.aliases.zsh
 # Example aliases
 # alias zshconfig="subl ~/.zshrc"
 # alias ohmyzsh="subl ~/.oh-my-zsh"
+
 #java
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
 #android
-export ANDROID_HOME=$HOME/Library/Android/sdk
-path+=("$ANDROID_HOME/tools:$PATH")
-path+=("$ANDROID_HOME/platform-tools:$PATH")
+# export ANDROID_HOME=$HOME/Library/Android/sdk
+# path+=("$ANDROID_HOME/tools:$PATH")
+# path+=("$ANDROID_HOME/platform-tools:$PATH")
+
 #python
 # path+=("/usr/local/anaconda3/bin")
 eval "$(pyenv init -)"
+# eval "(pipenv --completion)"
+
+#ruby
+eval "$(rbenv init -)"
+
 #home
 path+=("/usr/local/bin:/usr/local/sbin:$PATH")
 path+=("$HOME/bin")
@@ -111,10 +125,10 @@ export LDFLAGS="-L$(brew --prefix openssl)/lib"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 #tensorflow
-export TENSORFLOW_DIR=$HOME/dev/tensorflow
-export PYTHONPATH="${PYTHONPATH}:${TENSORFLOW_DIR}/models/research:${TENSORFLOW_DIR}/models/research/slim"
+# export TENSORFLOW_DIR=$HOME/dev/tensorflow
+# export PYTHONPATH="${PYTHONPATH}:${TENSORFLOW_DIR}/models/research:${TENSORFLOW_DIR}/models/research/slim"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 #vagrant
-export VAGRANT_HOME=/Users/gmaggess/dev/vagrantexport PATH="/usr/local/opt/ruby/bin:$PATH"
+# export VAGRANT_HOME=/Users/gmaggess/dev/vagrantexport PATH="/usr/local/opt/ruby/bin:$PATH"
