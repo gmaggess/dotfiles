@@ -20,9 +20,9 @@ brew install gnu-sed --with-default-names
 
 # Bash 4
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
-brew install bash
+# brew install bash
 brew tap homebrew/versions
-brew install bash-completion2
+# brew install bash-completion2
 brew install peco
 brew install thefuck
 
@@ -51,19 +51,19 @@ brew install gh
 # mtr - ping & traceroute. best.
 brew install mtr
 
-    # allow mtr to run without sudo
-    mtrlocation=$(brew info mtr | grep Cellar | sed -e 's/ (.*//') #  e.g. `/Users/paulirish/.homebrew/Cellar/mtr/0.86`
-    sudo chmod 4755 $mtrlocation/sbin/mtr
-    sudo chown root $mtrlocation/sbin/mtr
+# allow mtr to run without sudo
+mtrlocation=$(brew info mtr | grep Cellar | sed -e 's/ (.*//') #  e.g. `/Users/paulirish/.homebrew/Cellar/mtr/0.86`
+sudo chmod 4755 $mtrlocation/sbin/mtr
+sudo chown root $mtrlocation/sbin/mtr
 
 
 # Install other useful binaries
 # brew install the_silver_searcher
 # brew install fzf
 brew install git
-brew install imagemagick --with-webp
-brew install graphicsmagick
-brew install node # This installs `npm` too using the recommended installation method
+# brew install imagemagick --with-webp
+# brew install graphicsmagick
+brew install nvm # This installs `npm` too using the recommended installation method
 brew install yarn
 brew install watchman
 brew install pv
@@ -74,16 +74,18 @@ brew install tree
 brew install terminal-notifier
 
 # brew install Caskroom/cask/java
-# brew install pyenv
+brew install pyenv
+brew install rbenv
 # brew install pidcat   # colored logcat guy
 
 brew install zsh zsh-completions
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # npm packages
 brew install diff-so-fancy
 
 brew tap dart-lang/dart
-brew install dart
+# brew install dart
 
 # Remove outdated versions from the cellar
 brew cleanup
