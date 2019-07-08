@@ -1,10 +1,11 @@
 [alias]
 	c = commit -am
+  f = fetch -p
+  co = checkout
 	up = pull
 	p = push
 	s = status
 	sclone = clone --depth=1
-	co = checkout
 	df = diff --color --color-words --abbrev
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 
@@ -107,6 +108,13 @@ trustExitCode = false
 
 [difftool "sublimerge"]
 cmd = subl -n --wait \"$REMOTE\" \"$LOCAL\" --command \"sublimerge_diff_views {\\\"left_read_only\\\": true, \\\"right_read_only\\\": true}\"
+
+# [difftool "sourcetree"]
+# 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+# 	path = 
+# [mergetool "sourcetree"]
+# 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+# 	trustExitCode = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

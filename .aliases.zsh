@@ -40,9 +40,6 @@ alias mv='mv -i'
 
 alias dv='cd ~/dev'
 alias orcl='cd ~/dev/oracle'
-alias mcs='cd ~/dev/oracle/omce'
-
-alias astudio="open -a /Applications/Android\ Studio.app"
 
 #alias python="python3"
 
@@ -57,19 +54,21 @@ alias astudio="open -a /Applications/Android\ Studio.app"
 #     npm install
 # }
 alias gclean="git clean -xfd"
-alias push="git push"
-alias pushf="git push --force"
+alias gclean="git clean -xfd"
+alias gcommit="git clean -xfd"
+alias push="git p"
+alias pushf="git p --force"
 # Undo a `git push`
-alias undopush="git push -f origin HEAD^:master"
+alias undopush="git p -f origin HEAD^:master"
 
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
-alias master="git checkout master"
+alias cmaster="git checkout master"
 alias rmaster="git pull origin master --rebase"
 alias pmaster="git pull origin master"
-alias developer="git checkout developer"
-alias rdeveloper="git pull origin developer --rebase"
-alias pdeveloper="git pull origin developer"
+alias cdev="git co developer"
+alias rdev="git pull origin developer --rebase"
+alias pdev="git pull origin developer"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo gem update'
@@ -93,8 +92,6 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 
 #NPM
 alias npmlist="npm list --depth=0 -g"
-alias npmlocal="rm -f ~/.npmrc && cp ~/.npmrc.local ~/.npmrc"
-alias npmwork="rm -f ~/.npmrc && cp ~/.npmrc.work ~/.npmrc"
 
 # Disable Spotlight
 alias spotoff="sudo mdutil -a -i off"
@@ -102,8 +99,8 @@ alias spotoff="sudo mdutil -a -i off"
 alias spoton="sudo mdutil -a -i on"
 
 # McAfeee
-alias mcafee-stop='sudo /usr/local/McAfee/AntiMalware/VSControl stopoas'
-alias mcafee-start='sudo /usr/local/McAfee/AntiMalware/VSControl startoas'
+# alias mcafee-stop='sudo /usr/local/McAfee/AntiMalware/VSControl stopoas'
+# alias mcafee-start='sudo /usr/local/McAfee/AntiMalware/VSControl startoas'
 
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
