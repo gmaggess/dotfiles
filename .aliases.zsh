@@ -40,6 +40,8 @@ alias mv='mv -i'
 
 alias dv='cd ~/dev'
 alias orcl='cd ~/dev/oracle'
+alias ode='cd ~/dev/oracle/ode'
+alias ta='cd ~/dev/oracle/ta'
 
 #alias python="python3"
 

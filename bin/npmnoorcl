@@ -1,0 +1,2 @@
+npm config set registry https://registry.npmjs.com/
+npm config set email george.maggessy@gmail.com
