@@ -10,7 +10,7 @@ source $ZSH_CUSTOM/plugins/zsh-autosuggestions
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_DISABLE_COMPFIX=true
-# ZSH_THEME="refined"
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="gmaggess"
 fpath=(/usr/local/share/zsh-completions $fpath)
 rm -f "$HOME/.zcompdump" 
@@ -19,7 +19,7 @@ autoload -Uz promptinit; promptinit
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -63,7 +63,7 @@ export NVM_DIR="$HOME/.nvm"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins+=(git osx thefuck zsh-autosuggestions zsh-peco-history zsh-nvm)
+plugins+=(git osx thefuck zsh-autosuggestions zsh-peco-history zsh-nvm zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases.zsh
@@ -104,14 +104,6 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # path+=("$ANDROID_HOME/tools:$PATH")
 # path+=("$ANDROID_HOME/platform-tools:$PATH")
 
-#python
-# path+=("/usr/local/anaconda3/bin")
-eval "$(pyenv init -)"
-# eval "(pipenv --completion)"
-
-#ruby
-eval "$(rbenv init -)"
-
 #home
 path+=("/usr/local/bin:/usr/local/sbin:$PATH")
 path+=("$HOME/bin")
@@ -132,3 +124,16 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 #vagrant
 # export VAGRANT_HOME=/Users/gmaggess/dev/vagrantexport PATH="/usr/local/opt/ruby/bin:$PATH"
+
+#python
+# path+=("/usr/local/anaconda3/bin")
+eval "$(pyenv init -)"
+export PATH="$(pyenv root)/shims:$PATH"
+# eval "(pipenv --completion)"
+
+#ruby
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
