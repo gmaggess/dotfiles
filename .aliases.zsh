@@ -43,6 +43,8 @@ alias orcl='cd ~/dev/oracle'
 alias ode='cd ~/dev/oracle/ode'
 alias ta='cd ~/dev/oracle/ta'
 
+alias proxyflip='source ~/bin/proxyflip.sh'
+
 #alias python="python3"
 
 # GIT STUFF
@@ -68,9 +70,6 @@ alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup 
 alias cmaster="git checkout master"
 alias rmaster="git pull origin master --rebase"
 alias pmaster="git pull origin master"
-alias cdev="git co developer"
-alias rdev="git pull origin developer --rebase"
-alias pdev="git pull origin developer"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo gem update'

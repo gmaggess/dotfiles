@@ -1,3 +1,4 @@
+#!/bin/sh
 npm config set proxy http://www-proxy-hqdc.us.oracle.com:80
 npm config set https-proxy http://www-proxy-hqdc.us.oracle.com:80
 npm config set noproxy localhost,127.0.0.1,.us.oracle.com,.oraclecorp.com
