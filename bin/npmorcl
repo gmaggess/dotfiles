@@ -1,2 +1,3 @@
+#!/bin/sh
 npm config set registry https://artifactory-slc.oraclecorp.com/artifactory/api/npm/npmjs-remote
 npm config set email george.maggessy@oracle.com
