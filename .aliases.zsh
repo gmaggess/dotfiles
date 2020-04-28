@@ -43,7 +43,8 @@ alias orcl='cd ~/dev/oracle'
 alias ode='cd ~/dev/oracle/ode'
 alias ta='cd ~/dev/oracle/ta'
 
-alias proxyflip='source ~/bin/proxyflip.sh'
+alias envflip='source ~/bin/envflip.sh'
+alias brew='source ~/bin/brew.sh'
 
 #alias python="python3"
 
