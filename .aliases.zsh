@@ -46,6 +46,14 @@ alias ta='cd ~/dev/oracle/ta'
 alias envflip='source ~/bin/envflip.sh'
 alias brew='source ~/bin/brew.sh'
 
+alias xe='docker run --name orcl \
+            -d \
+            -p 51521:1521 \
+            -p 55500:5500 \
+            -e ORACLE_PWD=Welcome1 \
+            -e ORACLE_CHARACTERSET=AL32UTF8 \
+            oracle/database:18.4.0-xe'
+
 #alias python="python3"
 
 # GIT STUFF
