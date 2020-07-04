@@ -15,28 +15,22 @@ brew update
 # brew cask install android-studio
 # brew cask install arrsync
 # brew cask install chromium
+# brew cask install dash
 # brew cask install docker-toolbox
 # brew cask install google-drive
-# brew cask install google-photos-backup
 # brew cask install keep
 # brew cask install limechat
 # brew cask install onedrive
-# brew cask install skype
 # brew cask install smcfancontrol
 # brew cask install spectacle
 # brew cask install vagrant-manager
-# brew cask install virtualbox
-# brew cask install virtualbox-extension-pack
 # brew cask install vlc
-# brew cask install webkit-nightly
 # brew cask install webstorm
 brew cask install alfred
-brew cask install ampthetamine
 brew cask install appcleaner
 brew cask install atom
 brew cask install bartender
 brew cask install busycal
-brew cask install dash
 brew cask install disk-inventory-x
 brew cask install docker
 brew cask install dropbox
@@ -44,11 +38,9 @@ brew cask install firefox-developer-edition
 brew cask install firefox-esr
 brew cask install flux
 brew cask install font-fira-code
-brew cask install font-firacode-nerd-font
-brew cask install font-firacode-nerd-font-mono
+brew cask install font-fira-code-nerd-font
 brew cask install font-source-code-pro
-brew cask install font-source-code-pro-for-powerline
-brew cask install font-sourcecodepro-nerd-font-mono
+brew cask install ganttproject
 brew cask install gimp
 brew cask install google-chrome
 brew cask install google-chrome-canary
@@ -63,7 +55,10 @@ brew cask install sourcetree
 brew cask install sublime-merge
 brew cask install sublime-text
 brew cask install the-unarchiver
+brew cask install thunderbird
 brew cask install transmission
+brew cask install virtualbox
+brew cask install virtualbox-extension-pack
 brew cask install visual-studio-code
 brew cask install vnc-viewer
 brew cask install whatsapp
