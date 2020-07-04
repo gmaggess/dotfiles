@@ -49,7 +49,9 @@ brew cask install iterm2-nightly
 brew cask install keka
 brew cask install kindle
 brew cask install opera
+brew cask install postman
 brew cask install proxifier
+brew cask install skitch
 brew cask install slack
 brew cask install sourcetree
 brew cask install sublime-merge
