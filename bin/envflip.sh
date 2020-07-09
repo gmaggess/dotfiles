@@ -10,6 +10,11 @@ if [[ -z "${http_proxy}" ]]; then
     npm config set https-proxy http://www-proxy-hqdc.us.oracle.com:80
     npm config set noproxy localhost,127.0.0.1,.us.oracle.com,.oraclecorp.com
 
+    yarn config set proxy $http_proxy --silent
+    yarn config set https-proxy $http_proxy --silent
+    yarn config set no-proxy $no_proxy --silent 
+    yarn config set strict-ssl false --silent 
+
     git config --global http.proxy http://www-proxy-hqdc.us.oracle.com:80
     git config --global https.proxy https://www-proxy-hqdc.us.oracle.com:80
 
@@ -24,6 +29,12 @@ else
     npm config delete proxy
     npm config delete https-proxy
     npm config delete noproxy
+
+    yarn config delete proxy
+    yarn config delete https-proxy
+    yarn config delete no-proxy
+    yarn config delete strict-ssl
+    yarn config set no-proxy true
 
     git config --global --unset http.proxy
     git config --global --unset https.proxy
