@@ -94,6 +94,7 @@ tool = sourcetree
 
 [http]
 	sslVerify = false
+	proxy = http://www-proxy-hqdc.us.oracle.com:80
 
 # [difftool "sourcetree"]
 # 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -128,3 +129,5 @@ cmd = subl -n --wait \"$REMOTE\" \"$LOCAL\" --command \"sublimerge_diff_views {\
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[https]
+	proxy = https://www-proxy-hqdc.us.oracle.com:80
