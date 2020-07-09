@@ -43,7 +43,8 @@ alias orcl='cd ~/dev/oracle'
 alias ode='cd ~/dev/oracle/ode'
 alias ta='cd ~/dev/oracle/ta'
 
-alias envflip='source ~/bin/envflip.sh'
+alias envorcl='source ~/bin/envorcl.sh'
+alias envhome='source ~/bin/envhome.sh'
 alias brew='source ~/bin/brew.sh'
 alias xe='docker run --name orcl \
             -d \
