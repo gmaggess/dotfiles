@@ -1,7 +1,8 @@
 #!/bin/sh
-unset http_proxy
-unset https_proxy
-unset no_proxy
+unset HTTP_PROXY
+unset HTTPS_PROXY
+unset FTP_PROXY
+unset NO_PROXY
 
 npm config set registry https://registry.npmjs.com/
 npm config set email george.maggessy@gmail.com

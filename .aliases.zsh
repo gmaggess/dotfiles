@@ -67,7 +67,7 @@ alias xe='docker run --name orcl \
 #     npm install
 # }
 alias gclean="git clean -xfd"
-alias gclean="git clean -xfd"
+alias greset="git reset --hard"
 alias gcommit="git clean -xfd"
 alias push="git p"
 alias pushf="git p --force"
@@ -79,12 +79,13 @@ alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup 
 alias cmaster="git checkout master"
 alias rmaster="git pull origin master --rebase"
 alias pmaster="git pull origin master"
+alias cmain="git checkout main"
+alias rmain="git pull origin main --rebase"
+alias pmain="git pull origin main"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo gem update'
-# Update installed Ruby gems, Homebrew, npm, and their installed packages
-alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor; npm-check -g -u"
-alias update_brew_npm_gem='brew_update; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update --no-document'
+# alias update='sudo softwareupdate -i -a; brew upgrade; brew-cask-upgrade.sh; sudo gem update'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
 
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"

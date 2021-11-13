@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "react-native-cli": "^2.0.1",
-    "shrinkwrap-to-lockfile": "^1.0.1"
-  }
-}
