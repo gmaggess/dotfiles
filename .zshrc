@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -11,7 +18,8 @@ source $ZSH_CUSTOM/plugins/zsh-autosuggestions
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_DISABLE_COMPFIX=true
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="gmaggess"
+# ZSH_THEME="gmaggess"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 fpath=(/usr/local/share/zsh-completions $fpath)
 rm -f "$HOME/.zcompdump";
 autoload -Uz promptinit; promptinit
@@ -171,3 +179,7 @@ compdef _openapi_yargs_completions openapi
 ###-end-openapi-completions-###
 
 export PATH="/usr/local/opt/openssl@3/bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
