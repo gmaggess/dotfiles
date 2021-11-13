@@ -1,13 +1,14 @@
 [alias]
 	c = commit -am
-  f = fetch -p
-  co = checkout
+	f = fetch -p
+	co = checkout
 	up = pull
 	p = push
 	s = status
 	sclone = clone --depth=1
 	df = diff --color --color-words --abbrev
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	parent = "!git show-branch | grep '*' | grep -v \"$(git rev-parse --abbrev-ref HEAD)\" | head -n1 | sed 's/.*\\[\\(.*\\)\\].*/\\1/' | sed 's/[\\^~].*//' #"
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
@@ -94,7 +95,6 @@ tool = sourcetree
 
 [http]
 	sslVerify = false
-	proxy = http://www-proxy-hqdc.us.oracle.com:80
 
 # [difftool "sourcetree"]
 # 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -129,5 +129,5 @@ cmd = subl -n --wait \"$REMOTE\" \"$LOCAL\" --command \"sublimerge_diff_views {\
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[https]
-	proxy = https://www-proxy-hqdc.us.oracle.com:80
+[pull]
+	rebase = true

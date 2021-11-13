@@ -13,8 +13,9 @@ ZSH_DISABLE_COMPFIX=true
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="gmaggess"
 fpath=(/usr/local/share/zsh-completions $fpath)
-rm -f "$HOME/.zcompdump" 
+rm -f "$HOME/.zcompdump";
 autoload -Uz promptinit; promptinit
+# autoload -Uz compinit; compinit
 
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
@@ -63,7 +64,7 @@ export NVM_DIR="$HOME/.nvm"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins+=(git osx thefuck zsh-autosuggestions zsh-peco-history zsh-nvm zsh-syntax-highlighting)
+plugins+=(git macos thefuck zsh-autosuggestions zsh-peco-history zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases.zsh
@@ -97,7 +98,8 @@ source ~/.aliases.zsh
 # alias ohmyzsh="subl ~/.oh-my-zsh"
 
 #java
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 
 #android
 # export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -110,10 +112,17 @@ path+=("$HOME/bin")
 path+=("$(brew --prefix coreutils)/libexec/gnubin:$PATH")
 export PATH
 
+export CLASSPATH=$CLASSPATH:/Users/gmaggess/dev/oracle/fre/release-21.07.01.00/lib
+
 eval $(thefuck --alias)
 
-export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
-export LDFLAGS="-L$(brew --prefix openssl)/lib"
+# export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
+# export LDFLAGS="-L$(brew --prefix openssl)/lib"
+
+export LDFLAGS="-L/usr/local/opt/openssl@3/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@3/include"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl@3/lib/pkgconfig"
+
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 #tensorflow
@@ -126,10 +135,13 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # export VAGRANT_HOME=/Users/gmaggess/dev/vagrantexport PATH="/usr/local/opt/ruby/bin:$PATH"
 
 #python
-# path+=("/usr/local/anaconda3/bin")
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+# Load pyenv into the shell by adding
+# the following to ~/.zshrc:
 eval "$(pyenv init -)"
-export PATH="$(pyenv root)/shims:$PATH"
-# eval "(pipenv --completion)"
 
 #ruby
 eval "$(rbenv init -)"
@@ -137,3 +149,25 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:/Users/gmaggess/dev/oracle/oracle.boss.tools-0.1.0-SNAPSHOT/bin"
+#compdef openapi
+###-begin-openapi-completions-###
+#
+# yargs command completion script
+#
+# Installation: /usr/local/bin/openapi completion >> ~/.zshrc
+#    or /usr/local/bin/openapi completion >> ~/.zsh_profile on OSX.
+#
+_openapi_yargs_completions()
+{
+  local reply
+  local si=$IFS
+  IFS=$'
+' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" /usr/local/bin/openapi --get-yargs-completions "${words[@]}"))
+  IFS=$si
+  _describe 'values' reply
+}
+compdef _openapi_yargs_completions openapi
+###-end-openapi-completions-###
+
+export PATH="/usr/local/opt/openssl@3/bin:$PATH"

@@ -26,6 +26,7 @@ Thumbs.db
 # fish shell
 fishd.*
 .config/fish/fish_history
+.config/yarn/*
 fish/fish_history
 fish_prompt.*.copy
 
