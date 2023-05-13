@@ -45,6 +45,8 @@ alias ta='cd ~/dev/oracle/ta'
 
 alias envorcl='source ~/bin/envorcl.sh'
 alias envhome='source ~/bin/envhome.sh'
+alias suisdev='source ~/bin/suisdev.sh'
+alias tatoolsdev='source ~/bin/tatoolsdev.sh'
 alias brew='source ~/bin/brew.sh'
 alias xe='docker run --name orcl \
             -d \
@@ -55,6 +57,8 @@ alias xe='docker run --name orcl \
             oracle/database:18.4.0-xe'
 
 #alias python="python3"
+alias python="$(pyenv which python)"
+alias pip="$(pyenv which pip)"
 
 # GIT STUFF
 # alias gs='git status'
@@ -73,6 +77,7 @@ alias push="git p"
 alias pushf="git p --force"
 # Undo a `git push`
 alias undopush="git p -f origin HEAD^:master"
+alias proxygit='GIT_SSH=~/bin/git-proxy.sh git'
 
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
@@ -85,7 +90,9 @@ alias pmain="git pull origin main"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 # alias update='sudo softwareupdate -i -a; brew upgrade; brew-cask-upgrade.sh; sudo gem update'
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
+alias update-full='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask --greedy; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
+# alias update='brew update; brew upgrade --greedy; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
+alias update='brew update; brew upgrade; brew cleanup; npm install npm --location=global; npm update --location=global; gem update --system; gem update; gem cleanup'
 
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
