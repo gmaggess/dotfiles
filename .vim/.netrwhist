@@ -1,4 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
-let g:netrw_dirhist_2='/Users/gmaggess/dev/oracle/ta/vbss/origin-server-ms'
-let g:netrw_dirhist_1='/Users/gmaggess/dev/github/dotfiles'
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/gmaggess'
+let g:netrw_dirhist_3='/Users/gmaggess/dev/oracle/ta/spectra-ui-infra-services'
+let g:netrw_dirhist_2='/Users/gmaggess/dev/oracle/ta'
+let g:netrw_dirhist_1='/Users/gmaggess/dev/oracle/ta/vbaudits'
+let g:netrw_dirhist_0='/Users/gmaggess/dev/github/dotfiles'
+let g:netrw_dirhist_9='/Users/gmaggess/dev/github/dotfiles/.vim'
+let g:netrw_dirhist_8='/Users/gmaggess/dev/github/dotfiles'
+let g:netrw_dirhist_7='/Users/gmaggess/dev/oracle/ta/audit-violation-manager/audit-exemptions-ms/src/main/java/oracle/spectra/savm/common'
+let g:netrw_dirhist_6='/Users/gmaggess/dev/oracle/ta/audit-violation-manager/audit-exemptions-ms/src/main/java/oracle/spectra/savm'
+let g:netrw_dirhist_5='/Users/gmaggess/dev/oracle/ta/audit-violation-manager/audit-exemptions-ms/src/main/java/oracle/spectra/savm/common'

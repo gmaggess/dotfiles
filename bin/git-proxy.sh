@@ -1,0 +1,1 @@
+ssh -o "ProxyCommand nc -X connect -x www-proxy-hqdc.oracle.com:80 %h %p" $@

@@ -25,4 +25,7 @@ yarn config set no-proxy true
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 
+rm -f ~/.gemrc
+cp  ~/.gemrc.home ~/.gemrc
+
 echo "PERSONAL mode on"
