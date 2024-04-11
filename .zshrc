@@ -203,10 +203,6 @@ export BOSS_MODEL_HOME=$HOME/dev/oracle/boss/app-packages
 export PATH=$HOME/dev/oracle/rwddev/rwd_dev/boss-tools/bin:$PATH
 
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/gmaggess/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 ###SPACESHIP
 
 # ORDER
@@ -493,3 +489,53 @@ source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+
+source "/Users/gmaggess/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/gmaggess/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
