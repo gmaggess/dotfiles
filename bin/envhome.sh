@@ -26,6 +26,6 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 
 rm -f ~/.gemrc
-cp  ~/.gemrc.home ~/.gemrc
+cp -rf ~/.gemrc.home ~/.gemrc
 
 echo "PERSONAL mode on"

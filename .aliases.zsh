@@ -56,6 +56,8 @@ alias xe='docker run --name orcl \
             -e ORACLE_CHARACTERSET=AL32UTF8 \
             oracle/database:18.4.0-xe'
 
+#vim
+alias vim='mvim -v'
 #alias python="python3"
 alias python="$(pyenv which python)"
 alias pip="$(pyenv which pip)"
