@@ -55,7 +55,7 @@ Plug 'yuezk/vim-js'
 Plug 'prettier/vim-prettier'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 " Code completion
 Plug 'Valloric/YouCompleteMe'
