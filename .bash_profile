@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/bash_profile.pre.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.pre.bash"
 # Load our dotfiles like ~/.bash_prompt, etc…
 #   ~/.extra can be used for settings you don’t want to commit,
 #   Use it to configure your PATH, thus it being first in line.
@@ -98,9 +96,9 @@ if  which brew > /dev/null; then
     source "$(brew --prefix)/etc/bash_completion.d/brew"
 fi;
 
-# hub completion
-if  which hub > /dev/null; then
-    source "$(brew --prefix)/etc/bash_completion.d/hub.bash_completion.sh";
+# gh completion
+if  which gh > /dev/null; then
+    eval "$(gh completion -s bash)"
 fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
@@ -144,8 +142,6 @@ export MANPATH="/opt/local/share/man:$MANPATH"
 # Finished adapting your MANPATH environment variable for use with MacPorts.
 
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/bash_profile.post.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.post.bash"
 
 
 . "$HOME/.cargo/env"
