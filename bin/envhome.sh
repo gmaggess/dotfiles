@@ -25,7 +25,12 @@ yarn config set no-proxy true
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 
-rm -f ~/.gemrc
-cp -rf ~/.gemrc.home ~/.gemrc
+yes | cp -rf ~/.docker/config.json.home ~/.docker/config.json
+
+# rm -f ~/.gemrc
+# cp -rf ~/.gemrc.home ~/.gemrc
+
+rm -f ~/Library/Application\ Support/Sublime\ Text/Packages/User/Package\ Control.sublime-settings
+cp -rf ~/Library/Application\ Support/Sublime\ Text/Packages/User/Package\ Control.home.sublime-settings ~/Library/Application\ Support/Sublime\ Text/Packages/User/Package\ Control.sublime-settings
 
 echo "PERSONAL mode on"

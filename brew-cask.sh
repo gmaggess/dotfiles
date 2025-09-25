@@ -4,65 +4,62 @@
 #     brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
 
 # Install native apps
-brew tap homebrew/cask
-brew tap homebrew/cask-fonts
-brew tap homebrew/cask-versions
 brew update
 
-# brew cask install 1password
-# brew cask install anaconda
-# brew cask install android-studio
-# brew cask install arrsync
-# brew cask install chromium
-brew cask install dash
-# brew cask install docker-toolbox
-# brew cask install google-drive
-# brew cask install keep
-# brew cask install limechat
-# brew cask install onedrive
-# brew cask install smcfancontrol
-# brew cask install spectacle
-# brew cask install vagrant-manager
-# brew cask install vlc
-# brew cask install webstorm
-brew cask install alfred --force
-# brew cask install appcleaner --force
-# brew cask install atom --force
-brew cask install bartender --force
-#brew cask install busycal --force
-#brew cask install disk-inventory-x --force
-brew cask install docker --force
-brew cask install dropbox --force
-#brew cask install firefox-developer-edition --force
-brew cask install firefox-esr --force
-#brew cask install flux --force
-brew cask install font-fira-code --force
-brew cask install font-fira-code-nerd-font --force
-brew cask install font-source-code-pro --force
-#brew cask install ganttproject --force
-#brew cask install gimp --force
-brew cask install google-chrome --force
-#brew cask install google-chrome-canary --force
-brew cask install grammarly --force
+brew install --cask 1password --force
+brew install --cask anaconda --force
+# brew install --cask android-studio
+# brew install --cask arrsync
+# brew install --cask chromium
+brew install --cask dash
+# brew install --cask docker-toolbox
+# brew install --cask google-drive
+# brew install --cask keep
+# brew install --cask limechat
+# brew install --cask onedrive
+# brew install --cask smcfancontrol
+# brew install --cask spectacle
+# brew install --cask vagrant-manager
+# brew install --cask vlc
+# brew install --cask webstorm
+brew install --cask alfred --force
+# brew install --cask appcleaner --force
+# brew install --cask atom --force
+brew install --cask bartender --force
+#brew install --cask busycal --force
+#brew install --cask disk-inventory-x --force
+brew install --cask docker --force
+brew install --cask dropbox --force
+#brew install --cask firefox-developer-edition --force
+brew install --cask firefox-esr --force
+#brew install --cask flux --force
+brew install --cask font-fira-code --force
+brew install --cask font-fira-code-nerd-font --force
+brew install --cask font-source-code-pro --force
+#brew install --cask ganttproject --force
+#brew install --cask gimp --force
+brew install --cask google-chrome --force
+#brew install --cask google-chrome-canary --force
+brew install --cask grammarly --force
 brew cask intellij-idea-ce --force
-brew cask install iterm2 --force
-brew cask install java --force
-brew cask install oracle-jdk --force
-brew cask install keka --force
-#brew cask install opera --force
-brew cask install postman --force
-#brew cask install proxifier --force
-brew cask install skitch --force
-brew cask install slack --force
-brew cask install sourcetree --force
-brew cask install sublime-merge --force
-brew cask install sublime-text --force
-#brew cask install the-unarchiver --force
-#brew cask install thunderbird --force
-brew cask install transmission --force
-brew cask install virtualbox --force
-brew cask install virtualbox-extension-pack --force
-brew cask install visual-studio-code --force
-brew cask install vnc-viewer --force
-brew cask install whatsapp --force
-brew cask install zoomus --force
+brew install --cask iterm2 --force
+brew install --cask java --force
+brew install --cask oracle-jdk --force
+brew install --cask keka --force
+#brew install --cask opera --force
+brew install --cask postman --force
+#brew install --cask proxifier --force
+brew install --cask skitch --force
+brew install --cask slack --force
+brew install --cask sourcetree --force
+brew install --cask sublime-merge --force
+brew install --cask sublime-text --force
+#brew install --cask the-unarchiver --force
+#brew install --cask thunderbird --force
+brew install --cask transmission --force
+brew install --cask virtualbox --force
+brew install --cask virtualbox-extension-pack --force
+brew install --cask visual-studio-code --force
+brew install --cask vnc-viewer --force
+brew install --cask whatsapp --force
+brew install --cask zoomus --force

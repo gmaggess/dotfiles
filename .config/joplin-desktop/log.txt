@@ -1,0 +1,256 @@
+2024-10-30 09:07:07: App: Profile directory: /Users/gmaggess/.config/joplin-desktop
+2024-10-30 09:07:07: App: Root profile directory: /Users/gmaggess/.config/joplin-desktop
+2024-10-30 09:07:07: Database was open successfully
+2024-10-30 09:07:07: Checking for database schema update...
+2024-10-30 09:07:07: Current database version <null>
+2024-10-30 09:07:07: Upgrading database from version 0
+2024-10-30 09:07:07: Converting database to version 1
+2024-10-30 09:07:07: Converting database to version 2
+2024-10-30 09:07:07: Converting database to version 3
+2024-10-30 09:07:07: Converting database to version 4
+2024-10-30 09:07:07: Converting database to version 5
+2024-10-30 09:07:07: Converting database to version 6
+2024-10-30 09:07:07: Converting database to version 7
+2024-10-30 09:07:07: Converting database to version 8
+2024-10-30 09:07:07: Converting database to version 9
+2024-10-30 09:07:07: Converting database to version 10
+2024-10-30 09:07:07: Converting database to version 11
+2024-10-30 09:07:07: Converting database to version 12
+2024-10-30 09:07:07: Converting database to version 13
+2024-10-30 09:07:07: Converting database to version 14
+2024-10-30 09:07:07: Converting database to version 15
+2024-10-30 09:07:07: Converting database to version 16
+2024-10-30 09:07:07: Converting database to version 17
+2024-10-30 09:07:07: Converting database to version 18
+2024-10-30 09:07:07: Converting database to version 19
+2024-10-30 09:07:07: Converting database to version 20
+2024-10-30 09:07:07: Converting database to version 21
+2024-10-30 09:07:07: Converting database to version 22
+2024-10-30 09:07:07: Converting database to version 23
+2024-10-30 09:07:07: Converting database to version 24
+2024-10-30 09:07:07: Converting database to version 25
+2024-10-30 09:07:07: Converting database to version 26
+2024-10-30 09:07:07: Converting database to version 27
+2024-10-30 09:07:07: Converting database to version 28
+2024-10-30 09:07:07: Converting database to version 29
+2024-10-30 09:07:07: Converting database to version 30
+2024-10-30 09:07:07: Converting database to version 31
+2024-10-30 09:07:07: Converting database to version 32
+2024-10-30 09:07:07: Converting database to version 33
+2024-10-30 09:07:07: Converting database to version 34
+2024-10-30 09:07:07: Migration failed with fallback and will not be repeated - saving version number
+2024-10-30 09:07:07: Converting database to version 35
+2024-10-30 09:07:07: Converting database to version 36
+2024-10-30 09:07:07: Converting database to version 37
+2024-10-30 09:07:07: Converting database to version 38
+2024-10-30 09:07:07: Converting database to version 39
+2024-10-30 09:07:07: Converting database to version 40
+2024-10-30 09:07:07: Converting database to version 41
+2024-10-30 09:07:07: Converting database to version 42
+2024-10-30 09:07:07: Converting database to version 43
+2024-10-30 09:07:07: Converting database to version 44
+2024-10-30 09:07:07: Converting database to version 45
+2024-10-30 09:07:07: Converting database to version 46
+2024-10-30 09:07:07: Converting database to version 47
+2024-10-30 09:07:07: New version: 47. Previously recorded version: 0
+2024-10-30 09:07:07: Initializing tables...
+2024-10-30 09:07:07: KeychainService: checking if keychain supported
+2024-10-30 09:07:07: KeychainService: tried to set and get password. Result was: mytest
+2024-10-30 09:07:07: e2ee/utils: Master password is not set - trying to get it from the active master key...
+2024-10-30 09:07:07: handleSyncStartupOperation: Processing operation: 0
+2024-10-30 09:07:07: App: Client ID: b6fb6bc3ac604954997ef02e594cabb3
+2024-10-30 09:07:07: First start: detected locale as en_GB
+2024-10-30 09:07:07: models/Setting: Skipping all default migrations...
+2024-10-30 09:07:07: e2ee/utils: Trying to load 0 master keys...
+2024-10-30 09:07:07: e2ee/utils: Loaded master keys: 0
+2024-10-30 09:07:07: ResourceFetcher: Auto-add resources: Mode: always
+2024-10-30 09:07:07: permanentlyDeleteOldData: Processing items older than 7776000000ms...
+2024-10-30 09:07:07: ResourceFetcher: Auto-added resources: 0
+2024-10-30 09:07:07: permanentlyDeleteOldData: Items to permanently delete: {"noteIds":[],"folderIds":[]}
+2024-10-30 09:07:07: checkDisabledSyncItemsNotification: No errors: Hiding notification
+2024-10-30 09:07:07: Running migration: 20
+2024-10-30 09:07:07: DeleteAction: MigrationService: ; Item IDs: 1
+2024-10-30 09:07:07: Running migration: 27
+2024-10-30 09:07:07: DeleteAction: MigrationService: ; Item IDs: 2
+2024-10-30 09:07:07: Running migration: 33
+2024-10-30 09:07:07: SearchEngine: Updating FTS table...
+2024-10-30 09:07:07: Updating items_normalized from {"updated_time":0,"id":""}
+2024-10-30 09:07:07: SearchEngine: Updated FTS table in 1ms. Inserted: 0. Deleted: 0
+2024-10-30 09:07:07: DeleteAction: MigrationService: ; Item IDs: 3
+2024-10-30 09:07:07: Running migration: 35
+2024-10-30 09:07:07: SearchEngine: Updating FTS table...
+2024-10-30 09:07:08: Updating items_normalized from {"updated_time":0,"id":""}
+2024-10-30 09:07:08: SearchEngine: Updated FTS table in 1ms. Inserted: 0. Deleted: 0
+2024-10-30 09:07:08: DeleteAction: MigrationService: ; Item IDs: 4
+2024-10-30 09:07:08: Running migration: 42
+2024-10-30 09:07:08: DeleteAction: MigrationService: ; Item IDs: 5
+2024-10-30 09:07:08: App: "syncInfoCache" was changed - setting up encryption related code
+2024-10-30 09:07:08: e2ee/utils: Trying to load 0 master keys...
+2024-10-30 09:07:08: e2ee/utils: Loaded master keys: 0
+2024-10-30 09:07:08: App: "syncInfoCache" was changed - setting up encryption related code
+2024-10-30 09:07:08: e2ee/utils: Trying to load 0 master keys...
+2024-10-30 09:07:08: e2ee/utils: Loaded master keys: 0
+2024-10-30 09:07:08: App: "syncInfoCache" was changed - setting up encryption related code
+2024-10-30 09:07:08: e2ee/utils: Trying to load 0 master keys...
+2024-10-30 09:07:08: e2ee/utils: Loaded master keys: 0
+2024-10-30 09:07:08: app.start: doing regular boot
+2024-10-30 09:07:08: App: "syncInfoCache" was changed - setting up encryption related code
+2024-10-30 09:07:08: e2ee/utils: Trying to load 0 master keys...
+2024-10-30 09:07:08: e2ee/utils: Loaded master keys: 0
+2024-10-30 09:07:08: App: "syncInfoCache" was changed - setting up encryption related code
+2024-10-30 09:07:08: e2ee/utils: Trying to load 0 master keys...
+2024-10-30 09:07:08: e2ee/utils: Loaded master keys: 0
+2024-10-30 09:07:08: App: "syncInfoCache" was changed - setting up encryption related code
+2024-10-30 09:07:08: e2ee/utils: Trying to load 0 master keys...
+2024-10-30 09:07:08: e2ee/utils: Loaded master keys: 0
+2024-10-30 09:07:08: RevisionService: runInBackground: Starting background service with revision collection interval 600000
+2024-10-30 09:07:08: PluginService: Loading plugin from /Users/gmaggess/.config/joplin-desktop/cache/io.github.jackgruber.backup
+2024-10-30 09:07:08: SpellCheckerServiceDriverNative: Set effective languages to "en-US"
+2024-10-30 09:07:08: SpellCheckerServiceDriverNative: Set effective languages to "en-US"
+2024-10-30 09:07:08: joplin.plugins: Starting plugin: io.github.jackgruber.backup
+2024-10-30 09:07:08: joplin.plugins: Finished running onStart handler: io.github.jackgruber.backup (Took 203ms)
+2024-10-30 09:07:09: DecryptionWorker: cannot start because no master key is currently loaded.
+2024-10-30 09:07:12: RevisionService: maintenance: Starting...
+2024-10-30 09:07:12: RevisionService: maintenance: Service is enabled
+2024-10-30 09:07:12: RevisionService: collectRevisions: Created revisions for 0 notes
+2024-10-30 09:07:12: RevisionService: maintenance: Done in 133ms
+2024-10-30 09:07:13: checkForUpdates: Starting...
+2024-10-30 09:07:13: checkForUpdates: Checking with options {"includePreReleases":false}
+2024-10-30 09:07:14: checkForUpdates: Current version: 3.1.20
+2024-10-30 09:07:14: checkForUpdates: Latest version: 3.1.20
+2024-10-30 09:07:14: checkForUpdates: Is Pre-release: <false>
+2024-10-30 09:07:14: checkForUpdates: Done.
+2024-10-30 09:07:17: SearchEngine: Updating FTS table...
+2024-10-30 09:07:18: Updating items_normalized from {"updated_time":0,"id":""}
+2024-10-30 09:07:18: SearchEngine: Updated FTS table in 32ms. Inserted: 5. Deleted: 0
+2024-10-30 09:07:23: Preparing scheduled sync
+2024-10-30 09:07:23: Sync cancelled - no sync target is selected.
+2024-10-30 09:07:38: ResourceService::indexNoteResources: Start
+2024-10-30 09:07:38: ResourceService::indexNoteResources: Completed
+2024-10-30 09:07:38: ResourceService::deleteOrphanResources: []
+2024-10-30 09:07:47: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:07:48: SearchEngine: Updating FTS table...
+2024-10-30 09:07:48: Updating items_normalized from {"updated_time":0,"id":""}
+2024-10-30 09:07:48: SearchEngine: Updated FTS table in 3ms. Inserted: 0. Deleted: 0
+2024-10-30 09:08:30: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:08:36: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:08:46: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:08:53: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:09:36: SearchEngine: Updating FTS table...
+2024-10-30 09:09:36: Updating items_normalized from {"updated_time":0,"id":""}
+2024-10-30 09:09:36: SearchEngine: Updated FTS table in 27ms. Inserted: 1. Deleted: 0
+2024-10-30 09:09:48: Fetching geolocation...
+2024-10-30 09:09:48: Got lat/long
+2024-10-30 09:09:48: Updating lat/long of note 88d0c25f7ff247dfb3582fc4956ba3d2
+2024-10-30 09:09:51: SearchEngine: Updating FTS table...
+2024-10-30 09:09:51: Updating items_normalized from {"updated_time":0,"id":""}
+2024-10-30 09:09:51: SearchEngine: Updated FTS table in 25ms. Inserted: 2. Deleted: 0
+2024-10-30 09:10:02: SearchEngine: Updating FTS table...
+2024-10-30 09:10:03: Updating items_normalized from {"updated_time":0,"id":""}
+2024-10-30 09:10:03: SearchEngine: Updated FTS table in 21ms. Inserted: 1. Deleted: 0
+2024-10-30 09:10:05: focusHandler: [warn] Tried action "focus" on an undefined element: Dialog::titleInputRef
+2024-10-30 09:10:07: Preparing scheduled sync
+2024-10-30 09:10:07: Sync cancelled - no sync target is selected.
+2024-10-30 09:10:18: SearchEngine: Updating FTS table...
+2024-10-30 09:10:18: Updating items_normalized from {"updated_time":0,"id":""}
+2024-10-30 09:10:18: SearchEngine: Updated FTS table in 1ms. Inserted: 0. Deleted: 0
+2024-10-30 09:10:23: Preparing scheduled sync
+2024-10-30 09:10:23: Sync cancelled - no sync target is selected.
+2024-10-30 09:12:08: Running background sync on timer...
+2024-10-30 09:12:08: Preparing scheduled sync
+2024-10-30 09:12:08: Sync cancelled - no sync target is selected.
+2024-10-30 09:17:08: Running background sync on timer...
+2024-10-30 09:17:08: Preparing scheduled sync
+2024-10-30 09:17:08: Sync cancelled - no sync target is selected.
+2024-10-30 09:17:08: RevisionService: maintenance: Starting...
+2024-10-30 09:17:08: RevisionService: maintenance: Service is enabled
+2024-10-30 09:17:08: RevisionService: collectRevisions: Created revisions for 2 notes
+2024-10-30 09:17:08: RevisionService: maintenance: Done in 142ms
+2024-10-30 09:22:08: Running background sync on timer...
+2024-10-30 09:22:08: Preparing scheduled sync
+2024-10-30 09:22:08: Sync cancelled - no sync target is selected.
+2024-10-30 09:27:08: Running background sync on timer...
+2024-10-30 09:27:08: Preparing scheduled sync
+2024-10-30 09:27:08: Sync cancelled - no sync target is selected.
+2024-10-30 09:27:08: RevisionService: maintenance: Starting...
+2024-10-30 09:27:08: RevisionService: maintenance: Service is enabled
+2024-10-30 09:27:08: RevisionService: collectRevisions: Created revisions for 0 notes
+2024-10-30 09:27:08: RevisionService: maintenance: Done in 110ms
+2024-10-30 09:32:08: Running background sync on timer...
+2024-10-30 09:32:08: Preparing scheduled sync
+2024-10-30 09:32:08: Sync cancelled - no sync target is selected.
+2024-10-30 09:32:38: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:32:41: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:32:42: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:33:47: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:33:49: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:33:50: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:34:13: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:34:17: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:35:20: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:35:26: dialogs: [warn] Prompt appears to have been cancelled: <undefined>
+2024-10-30 09:35:26: e2ee/utils: toggleAndSetupEncryption: enabled: <true>  Master key <null>
+2024-10-30 09:35:41: App: "syncInfoCache" was changed - setting up encryption related code
+2024-10-30 09:35:41: waitForSyncFinishedThenSync - cancelling because no sync target is selected.
+2024-10-30 09:35:41: e2ee/utils: Trying to load 0 master keys...
+2024-10-30 09:35:41: e2ee/utils: Loaded master keys: 0
+2024-10-30 09:35:42: DecryptionWorker: cannot start because no master key is currently loaded.
+2024-10-30 09:35:44: RepositoryApi: findWorkingMirror: Using: https://raw.githubusercontent.com/joplin/plugins/master
+2024-10-30 09:35:51: Preparing scheduled sync
+2024-10-30 09:35:51: Sync cancelled - no sync target is selected.
+2024-10-30 09:37:08: Running background sync on timer...
+2024-10-30 09:37:08: Preparing scheduled sync
+2024-10-30 09:37:08: Sync cancelled - no sync target is selected.
+2024-10-30 09:37:08: RevisionService: maintenance: Starting...
+2024-10-30 09:37:08: RevisionService: maintenance: Service is enabled
+2024-10-30 09:37:08: RevisionService: collectRevisions: Created revisions for 0 notes
+2024-10-30 09:37:08: RevisionService: maintenance: Done in 104ms
+2024-10-30 09:42:08: Running background sync on timer...
+2024-10-30 09:42:08: Preparing scheduled sync
+2024-10-30 09:42:08: Sync cancelled - no sync target is selected.
+2024-10-30 09:47:08: RevisionService: maintenance: Starting...
+2024-10-30 09:47:08: RevisionService: maintenance: Service is enabled
+2024-10-30 09:47:08: Running background sync on timer...
+2024-10-30 09:47:08: Preparing scheduled sync
+2024-10-30 09:47:08: Sync cancelled - no sync target is selected.
+2024-10-30 09:47:08: RevisionService: collectRevisions: Created revisions for 0 notes
+2024-10-30 09:47:08: RevisionService: maintenance: Done in 113ms
+2024-10-30 09:52:08: Running background sync on timer...
+2024-10-30 09:52:08: Preparing scheduled sync
+2024-10-30 09:52:08: Sync cancelled - no sync target is selected.
+2024-10-30 09:57:08: RevisionService: maintenance: Starting...
+2024-10-30 09:57:08: RevisionService: maintenance: Service is enabled
+2024-10-30 09:57:08: Running background sync on timer...
+2024-10-30 09:57:08: Preparing scheduled sync
+2024-10-30 09:57:08: Sync cancelled - no sync target is selected.
+2024-10-30 09:57:08: RevisionService: collectRevisions: Created revisions for 0 notes
+2024-10-30 09:57:08: RevisionService: maintenance: Done in 111ms
+2024-10-30 10:02:08: Running background sync on timer...
+2024-10-30 10:02:08: Preparing scheduled sync
+2024-10-30 10:02:08: Sync cancelled - no sync target is selected.
+2024-10-30 10:07:08: Garbage collecting alarms...
+2024-10-30 10:07:08: RevisionService: maintenance: Starting...
+2024-10-30 10:07:08: RevisionService: maintenance: Service is enabled
+2024-10-30 10:07:08: Running background sync on timer...
+2024-10-30 10:07:08: Preparing scheduled sync
+2024-10-30 10:07:08: Sync cancelled - no sync target is selected.
+2024-10-30 10:07:08: RevisionService: collectRevisions: Created revisions for 0 notes
+2024-10-30 10:07:08: RevisionService: maintenance: Done in 108ms
+2024-10-30 10:12:08: Running background sync on timer...
+2024-10-30 10:12:08: Preparing scheduled sync
+2024-10-30 10:12:08: Sync cancelled - no sync target is selected.
+2024-10-30 10:17:08: RevisionService: maintenance: Starting...
+2024-10-30 10:17:08: RevisionService: maintenance: Service is enabled
+2024-10-30 10:17:08: Running background sync on timer...
+2024-10-30 10:17:08: Preparing scheduled sync
+2024-10-30 10:17:08: Sync cancelled - no sync target is selected.
+2024-10-30 10:17:08: RevisionService: collectRevisions: Created revisions for 0 notes
+2024-10-30 10:17:08: RevisionService: maintenance: Done in 118ms
+2024-10-30 10:19:31: JoplinCloudLoginScreen: [error] TypeError: Failed to fetch
+TypeError: Failed to fetch
+    at performLoginRequest (/Applications/Joplin.app/Contents/Resources/app.asar/node_modules/@joplin/lib/services/joplinCloudUtils.js:87:32)
+    at checkIfLoginWasSuccessful (/Applications/Joplin.app/Contents/Resources/app.asar/node_modules/@joplin/lib/services/joplinCloudUtils.js:101:12)
+    at /Applications/Joplin.app/Contents/Resources/app.asar/gui/JoplinCloudLoginScreen.js:26:89
+2024-10-30 10:22:08: Running background sync on timer...
+2024-10-30 10:22:08: Preparing scheduled sync
+2024-10-30 10:22:08: Sync cancelled - no sync target is selected.
