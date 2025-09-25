@@ -1,2 +1,1 @@
-#!/bin/sh
-open -na "IntelliJ IDEA CE.app" --args "$@"
+/Applications/IntelliJ IDEA CE.app/Contents/MacOS/idea

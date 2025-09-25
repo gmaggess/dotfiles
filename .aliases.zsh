@@ -91,8 +91,9 @@ alias rmain="git pull origin main --rebase"
 alias pmain="git pull origin main"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-# alias update='sudo softwareupdate -i -a; brew upgrade; brew-cask-upgrade.sh; sudo gem update'
 alias update-full='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask --greedy; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
+# alias update-full='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask --greedy; brew cleanup; sudo gem update --system; sudo gem update; sudo gem cleanup'
+# alias update='sudo softwareupdate -i -a; brew upgrade; brew-cask-upgrade.sh; sudo gem update'
 # alias update='brew update; brew upgrade --greedy; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
 alias update='brew update; brew upgrade; brew cleanup; npm install npm --location=global; npm update --location=global; gem update --system; gem update; gem cleanup'
 
@@ -112,6 +113,9 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 
 #NPM
 alias npmlist="npm list --depth=0 -g"
+
+alias jupyter-start="brew services start jupyterlab"
+alias jupyter-stop="brew services stop jupyterlab"
 
 # Disable Spotlight
 alias spotoff="sudo mdutil -a -i off"

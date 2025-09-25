@@ -1,0 +1,43 @@
+{
+	"$schema": "https://joplinapp.org/schema/settings.json",
+	"editor.codeView": true,
+	"locale": "en_GB",
+	"theme": 6,
+	"preferredLightTheme": 6,
+	"markdown.plugin.softbreaks": false,
+	"markdown.plugin.typographer": false,
+	"ui.layout": {
+		"key": "root",
+		"children": [
+			{
+				"key": "sideBar",
+				"width": 250,
+				"visible": true
+			},
+			{
+				"key": "noteList",
+				"width": 250,
+				"visible": true
+			},
+			{
+				"key": "editor",
+				"visible": true
+			}
+		],
+		"visible": true
+	},
+	"autoUploadCrashDumps": true,
+	"clipperServer.autoStart": true,
+	"noteVisiblePanes": [
+		"editor",
+		"viewer"
+	],
+	"editor": "\"/Applications/Sublime Text.app\"",
+	"export.pdfPageSize": "Letter",
+	"editor.spellcheckBeta": true,
+	"api.token": "14e33c56c21b320aa32d4cd0270c61292f3ff5be37190bdd5b8091e8690c892ef9b99473d3dbd0e0af9d5d7b56a57806922ee318844440bf8de5ce63058802f4",
+	"spellChecker.languages": [
+		"en-US"
+	],
+	"featureFlag.autoUpdaterServiceEnabled": true
+}
