@@ -26,9 +26,8 @@ git config --global http.proxy http://www-proxy-hqdc.us.oracle.com:80
 git config --global https.proxy https://www-proxy-hqdc.us.oracle.com:80
 
 yes | cp -rf ~/.docker/config.json.orcl ~/.docker/config.json
+yes | cp -rf ~/.gemrc.orcl ~/.gemrc
 
-# rm -f ~/.gemrc
-# cp -rf ~/.gemrc.orcl ~/.gemrc.json
 rm -f ~/Library/Application\ Support/Sublime\ Text/Packages/User/Package\ Control.sublime-settings
 cp -rf ~/Library/Application\ Support/Sublime\ Text/Packages/User/Package\ Control.orcl.sublime-settings ~/Library/Application\ Support/Sublime\ Text/Packages/User/Package\ Control.sublime-settings
 

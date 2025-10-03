@@ -1,0 +1,16 @@
+{
+  "auths": {
+    "docker-master.cdaas.oraclecloud.com": {
+      "auth": "Z21hZ2dlc3M6Y21WbWRHdHVPakF4T2pFM09EYzVOVFE0TnpBNmJXRlVXbXBHY0VJMWVXTjFaM1ppTWpSdGRrUldaVWM0Vm1OTg==",
+      "email": "george.maggessy@oracle.com"
+    }
+  },
+  "proxies": {
+    "default": {
+      "httpProxy": "http://www-proxy-hqdc.us.oracle.com:80",
+      "httpsProxy": "http://www-proxy-hqdc.us.oracle.com:80",
+      "noProxy": "localhost,127.0.0.1,.alm.oraclecorp.com,alm.oraclecorp.com,.oraclecorp.com,.us.oracle.com,.oraclevpn.com,192.168.0.0/16"
+    }
+  },
+  "currentContext": "rancher-desktop"
+}

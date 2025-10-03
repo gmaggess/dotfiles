@@ -7,6 +7,9 @@
 # git credential file
 .gitconfig.local
 
+# docker
+.docker/buildx
+.docker/contexts
 
 # Folder view configuration files
 .DS_Store
@@ -19,6 +22,7 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
+*.lock
 
 # Compiled Python files
 *.pyc

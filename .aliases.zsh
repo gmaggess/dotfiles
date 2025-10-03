@@ -89,6 +89,7 @@ alias pmaster="git pull origin master"
 alias cmain="git checkout main"
 alias rmain="git pull origin main --rebase"
 alias pmain="git pull origin main"
+alias gdir="~/bin/gdir.sh"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update-full='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask --greedy; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
