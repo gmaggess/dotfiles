@@ -1,0 +1,178 @@
+{
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "better-comments.highlightPlainText": true,
+  "better-comments.multilineComments": true,
+  "diffEditor.maxComputationTime": 500000,
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeLens": false,
+  "editor.defaultFormatter": "shardulm94.trailing-spaces",
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.formatOnPaste": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderWhitespace": "all",
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.tmpl": "html"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.idea": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.vscode": true
+  },
+  "files.hotExit": "off",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "GitLive.Issue tracker integration": "Disabled",
+  "java.dependency.showMembers": true,
+  "java.format.settings.profile": "GoogleStyle",
+  "java.help.firstView": "gettingStarted",
+  "java.project.importOnFirstTimeStartup": "automatic",
+  "javascript.referencesCodeLens.enabled": false,
+  "javascript.referencesCodeLens.showOnAllFunctions": true,
+  "maven.executable.path": "/usr/local/bin/mvn",
+  "maven.terminal.favorites": [
+    {
+      "alias": "Clean install",
+      "command": "clean install"
+    }
+  ],
+  "prettier.tabWidth": 4,
+  "redhat.telemetry.enabled": true,
+  "search.exclude": {
+    "**/.idea": true
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "sonarlint.analyzerProperties": {
+    "sonar.javascript.node.maxspace": "4096"
+  },
+  "sonarlint.testFilePattern": "src/**/*.java",
+  "tabnine.experimentalAutoImports": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.fontSize": 13,
+  "typescript.referencesCodeLens.enabled": true,
+  "update.mode": "manual",
+  "workbench.sideBar.location": "none",
+  "workbench.startupEditor": "none",
+  "application.shellEnvironmentResolutionTimeout": 15,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "lineBreakInsert"
+      ],
+      "silent": true
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "git.openRepositoryInParentFolders": "always",
+  "workbench.settings.applyToAllProfiles": [
+    "monokaiPro.fileIconsMonochrome"
+  ],
+  "vim.disableExtension": false,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "terminal.external.osxExec": "iTerm2.app",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "/opt/homebrew/bin/bash",
+      "args": [
+        "-l"
+      ],
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "/bin/zsh",
+      "args": [
+        "-l"
+      ]
+    }
+  },
+  "terminal.integrated.shellIntegration.enabled": true,
+  "editor.formatOnSave": true,
+  "window.newWindowProfile": "Default",
+  "workbench.iconTheme": "material-icon-theme",
+  "kilo-code.allowedCommands": [
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "kilo-code.deniedCommands": [],
+  "github.copilot.advanced": {},
+  "chat.tools.global.autoApprove": true,
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.hideOnboarding": true,
+  "chat.permissions.default": "autoApprove"
+}

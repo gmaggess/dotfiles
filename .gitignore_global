@@ -1,0 +1,43 @@
+# working files
+.vim/viminfo
+.vim/swaps/*
+.vim/undo
+
+# git credential file
+.gitconfig.local
+
+# docker
+.docker/buildx
+.docker/contexts
+.docker/.token_seed
+.docker/cli-plugins
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+*.lock
+.zsh-update
+
+# Compiled Python files
+*.pyc
+
+# Large binaries (install these via package managers instead)
+bin/kubectl
+bin/kubectl-convert
+
+# Environment files with secrets
+bin/.env
+
+# Obsidian
+.obsidian/workspace.json
+.obsidian/plugins/make-md/Spaces.mdb
+.aider*
+.claude

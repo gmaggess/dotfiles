@@ -1,0 +1,60 @@
+# Shared shell functions and settings sourced by both .zshrc and .bash_profile
+
+# Resolve Homebrew prefix once; used by both zsh and bash for PATH building.
+if [[ -z "${DOTFILES_BREW_PREFIX:-}" ]]; then
+  DOTFILES_BREW_PREFIX="${HOMEBREW_PREFIX:-}"
+  if [[ -z "$DOTFILES_BREW_PREFIX" ]] && command -v brew >/dev/null 2>&1; then
+    DOTFILES_BREW_PREFIX="$(brew --prefix)"
+  fi
+  DOTFILES_COREUTILS_GNUBIN=""
+  DOTFILES_OPENSSL_BIN=""
+  if [[ -n "$DOTFILES_BREW_PREFIX" ]]; then
+    DOTFILES_COREUTILS_GNUBIN="$DOTFILES_BREW_PREFIX/opt/coreutils/libexec/gnubin"
+    DOTFILES_OPENSSL_BIN="$DOTFILES_BREW_PREFIX/opt/openssl@3/bin"
+  fi
+  [[ -d "$DOTFILES_COREUTILS_GNUBIN" ]] || DOTFILES_COREUTILS_GNUBIN=""
+  [[ -d "$DOTFILES_OPENSSL_BIN" ]] || DOTFILES_OPENSSL_BIN=""
+  [[ -z "$DOTFILES_COREUTILS_GNUBIN" && -d "/opt/homebrew/opt/coreutils/libexec/gnubin" ]] \
+    && DOTFILES_COREUTILS_GNUBIN="/opt/homebrew/opt/coreutils/libexec/gnubin"
+  [[ -z "$DOTFILES_OPENSSL_BIN" && -d "/opt/homebrew/opt/openssl@3/bin" ]] \
+    && DOTFILES_OPENSSL_BIN="/opt/homebrew/opt/openssl@3/bin"
+  export DOTFILES_BREW_PREFIX DOTFILES_COREUTILS_GNUBIN DOTFILES_OPENSSL_BIN
+fi
+
+# Kubernetes config
+export KUBE_CONFIG_PATH="$HOME/.kube/config"
+
+# Detect and set JAVA_HOME from SDKMAN installations
+__dotfiles_set_java_home() {
+  # Avoid errors when optional SDKMAN directories have no matching versions.
+  [[ -z "${ZSH_VERSION:-}" ]] || setopt local_options null_glob
+  local java_home_path=""
+  local candidate=""
+  local sdk_java_root="$HOME/.sdkman/candidates/java"
+
+  if [[ -n "${GRAALVM_HOME:-}" && -d "${GRAALVM_HOME:-}" ]]; then
+    export JAVA_HOME="$GRAALVM_HOME"
+    return
+  fi
+
+  if [[ -d "$sdk_java_root/current" ]]; then
+    export JAVA_HOME="$sdk_java_root/current"
+    return
+  fi
+
+  for candidate in "$sdk_java_root"/graalvm*jdk-21*/ "$sdk_java_root"/graalvm-ce-java21*/; do
+    [[ -d "$candidate" ]] || continue
+    java_home_path="${candidate%/}"
+    export JAVA_HOME="$java_home_path"
+    return
+  done
+
+  for candidate in "$sdk_java_root"/*/; do
+    [[ -d "$candidate" ]] || continue
+    java_home_path="${candidate%/}"
+    export JAVA_HOME="$java_home_path"
+    return
+  done
+}
+__dotfiles_set_java_home
+unset -f __dotfiles_set_java_home

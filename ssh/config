@@ -1,0 +1,6 @@
+# Keep personal hosts and identities in the optional private include.
+Include ~/.ssh/config.local
+
+Host *
+    ServerAliveInterval 60
+    ServerAliveCountMax 3

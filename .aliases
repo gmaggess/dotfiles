@@ -1,0 +1,171 @@
+# Advanced Aliases.
+# Use with caution
+#
+
+# Claude Code
+alias cc='claude --dangerously-skip-permissions'
+
+# ls via eza (modern replacement with icons, git status, colors)
+if command -v eza >/dev/null 2>&1; then
+  alias l='eza -lF --icons'
+  alias la='eza -laF --icons'
+  alias lr='eza -lF --icons --sort=modified'
+  alias lt='eza --tree --icons -L 2'
+  alias ll='eza -l --icons'
+  alias ldot='eza -la --icons -d .*'
+  alias lS='eza -laF --icons --sort=size'
+  alias lart='eza -laF --icons --sort=modified --reverse'
+  alias lrt='eza -lF --icons --sort=modified --reverse'
+else
+  alias l='ls -lFh'
+  alias la='ls -lAFh'
+  alias lr='ls -tRFh'
+  alias lt='ls -ltFh'
+  alias ll='ls -l'
+  alias ldot='ls -ld .*'
+  alias lS='ls -1FSsh'
+  alias lart='ls -1Fcart'
+  alias lrt='ls -1Fcrt'
+fi
+command -v gxargs >/dev/null 2>&1 && alias xargs='gxargs'
+
+alias t0='tree -d'
+alias t2='tree -d -L 2'
+alias t3='tree -d -L 3'
+
+alias zshrc='$EDITOR ~/.zshrc' # Quick access to the ~/.zshrc file
+alias aliases='$EDITOR ~/.aliases' # Quick access to aliases
+
+alias grep='grep --color=auto'
+alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
+
+alias t='tail -f'
+
+alias dud='du -d 1 -h'
+alias duf='du -sh *'
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+alias h='history'
+alias hgrep="fc -El 0 | grep"
+alias help='man'
+alias p='ps -f'
+alias sortnr='sort -n -r'
+alias unexport='unset'
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+alias dev='cd ~/dev'
+alias ghb='cd ~/dev/github'
+alias labs='cd ~/dev/labs'
+alias dot='cd ~/dev/github/dotfiles; code ~/dev/github/dotfiles --profile Default'
+# VS Code without any extensions enabled
+alias c0de='code --disable-extensions'
+
+
+#vim
+command -v mvim >/dev/null 2>&1 && alias vim='mvim -v'
+if command -v pyenv >/dev/null 2>&1; then
+  python() { command pyenv exec python "$@"; }
+  pip() { command pyenv exec pip "$@"; }
+fi
+
+# GIT STUFF
+alias gclean="git clean -xfd"
+alias greset="git reset --hard"
+alias gcommit="git commit -am"
+alias push="git p"
+alias pushf="git p --force"
+# Undo last `git push` on the current branch (force-pushes HEAD^ to remote)
+undopush() { git push --force origin "HEAD^:$(git symbolic-ref --short HEAD)"; }
+
+# git root
+alias gr='[ ! -z $(git rev-parse --show-cdup) ] && cd $(git rev-parse --show-cdup || pwd)'
+alias cmaster="git checkout master"
+alias rmaster="git pull origin master --rebase"
+alias pmaster="git pull origin master"
+alias cmain="git checkout main"
+alias rmain="git pull origin main --rebase"
+alias pmain="git pull origin main"
+alias gdir="~/bin/gdir.sh"
+
+# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias update-full='sudo softwareupdate -i -a; brew update; brew upgrade; brew upgrade --cask --greedy; brew cleanup; npm install npm -g; npm update -g; gem update --system; gem update; gem cleanup'
+alias update='brew update; brew upgrade; brew cleanup; npm install npm --location=global; npm update --location=global; gem update --system; gem update; gem cleanup'
+
+# Clean up LaunchServices to remove duplicates in the "Open With" menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
+# Recursively delete `.DS_Store` files
+alias cleanup_dsstore="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Empty the Trash on all mounted volumes and the main HDD
+# Also, clear Apple's System Logs to improve shell startup speed
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+#NPM
+alias npmlist="npm list --depth=0 -g"
+
+# Jupyter Notebook (stop from another terminal; defaults to port 8888)
+alias jupyter-start='jupyter notebook'
+alias jupyter-stop='jupyter server stop'
+alias jupyter-status='jupyter server list'
+
+# Ollama (manual startup; does not enable launch at login)
+alias ollama-start='brew services run ollama'
+alias ollama-stop='brew services stop ollama'
+alias ollama-status='brew services info ollama'
+
+# Kafka (manual startup; does not enable launch at login)
+alias kafka-start='brew services run kafka'
+alias kafka-stop='brew services stop kafka'
+alias kafka-status='brew services info kafka'
+
+# Cassandra (manual startup; does not enable launch at login)
+alias cassandra-start='brew services run cassandra'
+alias cassandra-stop='brew services stop cassandra'
+alias cassandra-status='brew services info cassandra'
+
+# Status of local services with startup aliases
+alias services-status='for service in pg redis phoenix jupyter ollama kafka cassandra; do printf "\n=== %s ===\n" "$service"; eval "${service}-status"; done'
+
+# Disable Spotlight
+alias spotoff="sudo mdutil -a -i off"
+# Enable Spotlight
+alias spoton="sudo mdutil -a -i on"
+
+# Kill all the tabs in Chrome to free up memory
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+
+# --- zsh-only section ---
+if [ -n "$ZSH_VERSION" ]; then
+  # zsh suffix aliases: auto-open files by extension
+  if autoload -Uz is-at-least && is-at-least 4.2.0; then
+    if [[ -n "$BROWSER" ]]; then
+      _browser_fts=(htm html de org net com at cx nl se dk)
+      for ft in $_browser_fts; do alias -s $ft=$BROWSER; done
+    fi
+
+    _editor_fts=(cpp cxx cc c hh h inl asc txt TXT tex)
+    for ft in $_editor_fts; do alias -s $ft=$EDITOR; done
+
+    if [[ -n "$XIVIEWER" ]]; then
+      _image_fts=(jpg jpeg png gif mng tiff tif xpm)
+      for ft in $_image_fts; do alias -s $ft=$XIVIEWER; done
+    fi
+
+    _media_fts=(ape avi flv m4a mkv mov mp3 mpeg mpg ogg ogm rm wav webm)
+    for ft in $_media_fts; do alias -s $ft=mplayer; done
+  fi
+
+  # Make zsh know about hosts already accessed by SSH
+  zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
+fi
+
+[[ ! -f "$HOME/.aliases.local" ]] || source "$HOME/.aliases.local"
